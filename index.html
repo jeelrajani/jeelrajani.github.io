@@ -385,23 +385,23 @@
 
     });
 
-    // function Navigate(indx) {
-    //     document.querySelectorAll(".Links li")
-    //         .forEach(li => li.classList.remove("activeLink"));
-
-    //     document.querySelectorAll(".Links li")[indx]
-    //         .classList.add("activeLink");
-
-    //     swiper.slideTo(indx, 700, true);
-    // }
-
     function Navigate(indx) {
-        document.querySelectorAll(".Links li").forEach(li => li.classList.remove("activeLink"));
-        document.querySelectorAll(".Links li")[indx].classList.add("activeLink");
+        document.querySelectorAll(".Links li")
+            .forEach(li => li.classList.remove("activeLink"));
 
-        swiper.slideTo(indx, 700, true); // go to slide
-        swiper.update();                  // force Swiper to recalc cube
+        document.querySelectorAll(".Links li")[indx]
+            .classList.add("activeLink");
+
+        swiper.slideTo(indx, 700, true);
     }
+
+    // function Navigate(indx) {
+    //     document.querySelectorAll(".Links li").forEach(li => li.classList.remove("activeLink"));
+    //     document.querySelectorAll(".Links li")[indx].classList.add("activeLink");
+
+    //     swiper.slideTo(indx, 700, true); // go to slide
+    //     swiper.update();                  // force Swiper to recalc cube
+    // }
 
 </script>
 
