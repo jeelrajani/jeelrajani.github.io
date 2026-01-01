@@ -27,6 +27,9 @@
             </li>
         </ul>
     </aside>
+    <div class="menu-toggle">
+        <i class="fa fa-bars"></i>
+    </div>
     <div class="swiper mySwiper">
         <div class="SlideContainer swiper-wrapper">
             <div class="swiper-slide home-slide">
@@ -209,19 +212,18 @@
     document.addEventListener("DOMContentLoaded", function () {
 
         swiper = new Swiper(".swiper", {
-            effect: "cube",
+            direction: "vertical",
+            effect: "slide",          // ✅ normal slide
+            speed: 600,
             allowTouchMove: false,
             grabCursor: false,
-            cubeEffect: {
-                shadow: true,
-                slideShadows: true,
-                shadowOffset: 20,
-                shadowScale: 0.94,
-            },
-            mousewheel: true
+            mousewheel: true,
+            keyboard: {
+                enabled: true
+            }
         });
 
-        swiper.on('slideChange', function () {
+        swiper.on("slideChange", function () {
             document.querySelectorAll(".Links li")
                 .forEach(li => li.classList.remove("activeLink"));
 
@@ -239,6 +241,14 @@
         document.querySelectorAll(".Links li")[indx]
             .classList.add("activeLink");
 
-        swiper.slideTo(indx, 1000, true);
+        swiper.slideTo(indx, 600, true);
     }
+</script>
+<script>
+    const toggle = document.querySelector(".menu-toggle");
+    const sidebar = document.querySelector("aside");
+
+    toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+    });
 </script>

@@ -510,3 +510,38 @@ form h2 .SocialLinks i:hover {
 .about-us {
   overflow: auto;
 }
+
+/* ===== MOBILE SIDEBAR ===== */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  aside {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    height: 100vh;
+    z-index: 998;
+    transition: left 0.3s ease;
+  }
+
+  aside.active {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mySwiper {
+    width: 100vw !important;
+  }
+}
