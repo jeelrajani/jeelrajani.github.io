@@ -5,94 +5,82 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
-/* HERO LAYOUT */
+/* HERO WRAPPER */
 .hero {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
 }
 
-/* LEFT SIDE */
-.hero-left {
-  flex: 1;
-  background: #4f46e5; /* purple-blue */
-  color: #eaff6a; /* neon green text */
-  padding: 60px;
+/* LEFT PANEL */
+.left {
+  width: 50%;
+  background: #4c3fd1; /* purple-blue like reference */
+  color: #d9ff4a; /* neon green text */
+  padding: 70px;
   position: relative;
 }
 
-.brand {
-  font-size: 20px;
+.logo {
+  font-size: 22px;
   font-weight: 600;
-  margin-bottom: 60px;
-  color: #eaff6a;
+  margin-bottom: 80px;
 }
 
-.hero-left h1 {
-  font-size: 56px;
-  line-height: 1.1;
-  margin-bottom: 20px;
+.left h1 {
+  font-size: 72px;
+  line-height: 1.05;
+  margin-bottom: 25px;
 }
 
-.hero-left h1 span {
+.left h1 span {
   color: #ffffff;
 }
 
-.subtitle {
-  color: #e0e7ff;
-  font-size: 18px;
+.desc {
   max-width: 420px;
-  margin-bottom: 30px;
+  font-size: 18px;
+  color: #e0e7ff;
+  margin-bottom: 70px;
 }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  padding: 12px 26px;
-  background: #111827;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
-  margin-bottom: 50px;
-}
-
-.btn:hover {
-  background: #000;
-}
-
-/* META INFO */
-.meta {
+/* STATS */
+.stats {
   display: flex;
-  gap: 40px;
+  gap: 60px;
   font-size: 14px;
-  color: #d1d5db;
+  color: #e5e7eb;
 }
 
-/* RIGHT SIDE */
-.hero-right {
-  flex: 1;
-  background: #c7f000; /* light green */
+/* RIGHT PANEL */
+.right {
+  width: 50%;
+  background: #d9ff4a; /* light green */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
 }
 
-/* IMAGE BOX */
-.image-box {
+/* IMAGE CARD */
+.photo-frame {
   background: #ffffff;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  padding: 18px;
+  position: relative;
 }
 
-.image-box img {
-  width: 260px;
-  height: auto;
-  border-radius: 4px;
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: -15px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.photo-frame img {
+  width: 280px;
+  display: block;
 }
 
 /* RESPONSIVE */
@@ -101,16 +89,17 @@ body {
     flex-direction: column;
   }
 
-  .hero-left,
-  .hero-right {
+  .left,
+  .right {
+    width: 100%;
     padding: 40px;
   }
 
-  .hero-left h1 {
-    font-size: 40px;
+  .left h1 {
+    font-size: 48px;
   }
 
-  .meta {
+  .stats {
     flex-direction: column;
     gap: 20px;
   }
