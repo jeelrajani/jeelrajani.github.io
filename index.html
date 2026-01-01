@@ -162,7 +162,7 @@
 
                 </div>
             </div>
-            <div class="swiper-slide experience">
+            <div class="swiper-slide gallery experience">
                 <h1 class="heading">Work Experience</h1>
 
                 <div class="experience-content">
@@ -349,8 +349,8 @@
     document.addEventListener("DOMContentLoaded", function () {
 
         swiper = new Swiper(".swiper", {
-            direction: "vertical",
             effect: "cube",
+            direction: "vertical",
             speed: 700,
 
             cubeEffect: {
@@ -361,26 +361,22 @@
             mousewheel: {
                 forceToAxis: true,
                 sensitivity: 1,
-                releaseOnEdges: true
+                releaseOnEdges: true,   // ⭐ VERY IMPORTANT
             },
 
             allowTouchMove: false,
-            simulateTouch: false,
             grabCursor: false,
-            keyboard: { enabled: true }
+            keyboard: {
+                enabled: true
+            }
         });
 
-        /* 🔥 FIX: Disable cube when Contact slide is active */
-        swiper.on("slideChangeTransitionStart", () => {
-            const activeSlide = swiper.slides[swiper.activeIndex];
+        swiper.on("slideChange", function () {
+            document.querySelectorAll(".Links li")
+                .forEach(li => li.classList.remove("activeLink"));
 
-            if (activeSlide.classList.contains("contactMe")) {
-                swiper.params.effect = "slide";
-                swiper.update();
-            } else {
-                swiper.params.effect = "cube";
-                swiper.update();
-            }
+            document.querySelectorAll(".Links li")[swiper.activeIndex]
+                .classList.add("activeLink");
         });
 
     });
@@ -394,15 +390,6 @@
 
         swiper.slideTo(indx, 700, true);
     }
-
-    // function Navigate(indx) {
-    //     document.querySelectorAll(".Links li").forEach(li => li.classList.remove("activeLink"));
-    //     document.querySelectorAll(".Links li")[indx].classList.add("activeLink");
-
-    //     swiper.slideTo(indx, 700, true); // go to slide
-    //     swiper.update();                  // force Swiper to recalc cube
-    // }
-
 </script>
 
 <script>
@@ -416,7 +403,7 @@
 
 <script>
     const scrollableSections = document.querySelectorAll(
-        ".about-us, .contactMe, .services, .projects, .experience, .skills"
+        ".about-us, .contactMe, .services, .gallery, .projects, .experience, .skills"
     );
 
     scrollableSections.forEach(section => {
