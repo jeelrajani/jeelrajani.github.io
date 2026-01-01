@@ -223,7 +223,8 @@
 
             mousewheel: {
                 forceToAxis: true,
-                sensitivity: 1
+                sensitivity: 1,
+                releaseOnEdges: true   // ⭐ VERY IMPORTANT
             },
 
             allowTouchMove: false,
@@ -264,19 +265,25 @@
 </script>
 
 <script>
-    document.querySelectorAll(
+    const scrollableSections = document.querySelectorAll(
         ".about-us, .contactMe, .services, .gallery"
-    ).forEach(section => {
+    );
 
+    scrollableSections.forEach(section => {
         section.addEventListener("wheel", function (e) {
+            const delta = e.deltaY;
             const atTop = this.scrollTop === 0;
             const atBottom =
-                this.scrollHeight - this.scrollTop === this.clientHeight;
+                Math.ceil(this.scrollTop + this.clientHeight) >= this.scrollHeight;
 
-            if (!atTop && !atBottom) {
-                e.stopPropagation(); // 🔥 prevents slide change
+            if (
+                (delta < 0 && !atTop) ||   // scrolling up inside content
+                (delta > 0 && !atBottom)   // scrolling down inside content
+            ) {
+                e.stopPropagation();      // stop Swiper
+                e.preventDefault();       // allow native scroll
+                this.scrollTop += delta;
             }
         }, { passive: false });
-
     });
 </script>
