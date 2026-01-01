@@ -556,7 +556,9 @@ form h2 .SocialLinks i:hover {
 .about-us,
 .contactMe,
 .services,
-.gallery {
+.gallery,
+.projects,
+.skills {
   height: 100%;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -564,7 +566,9 @@ form h2 .SocialLinks i:hover {
 }
 
 .about-us,
-.contactMe {
+.contactMe,
+.projects,
+.skills {
   scroll-behavior: smooth;
 }
 
@@ -726,13 +730,4 @@ form h2 .SocialLinks i:hover {
   margin-bottom: 10px;
   line-height: 1.6;
   font-weight: 300;
-}
-
-/* Scrollbar */
-.projects::-webkit-scrollbar {
-  width: 6px;
-}
-.projects::-webkit-scrollbar-thumb {
-  background: #80ed99;
-  border-radius: 10px;
 }
