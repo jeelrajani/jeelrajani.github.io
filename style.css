@@ -731,3 +731,70 @@ form h2 .SocialLinks i:hover {
   line-height: 1.6;
   font-weight: 300;
 }
+
+/* Education */
+/* ===== EDUCATION ===== */
+.education {
+  padding: 80px 100px;
+  color: white;
+  overflow-y: auto;
+}
+
+.education-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+}
+
+.education-card {
+  background: #212529;
+  padding: 30px;
+  border-radius: 14px;
+  transition: 0.25s;
+}
+
+.education-card:hover {
+  background: #80ed99;
+  color: #176d2d;
+}
+
+.education-card h2 {
+  color: #80ed99;
+  margin-bottom: 5px;
+  font-size: 1.6rem;
+}
+
+.education-card:hover h2 {
+  color: #176d2d;
+}
+
+.education-card .institute {
+  opacity: 0.9;
+  margin-bottom: 5px;
+}
+
+.education-card .duration {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+
+.education-card ul {
+  padding-left: 20px;
+}
+
+.education-card li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Scrollbar */
+.education::-webkit-scrollbar {
+  width: 6px;
+}
+.education::-webkit-scrollbar-thumb {
+  background: #80ed99;
+  border-radius: 10px;
+}
