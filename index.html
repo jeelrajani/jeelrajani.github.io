@@ -338,7 +338,8 @@
             mousewheel: {
                 forceToAxis: true,
                 sensitivity: 1,
-                releaseOnEdges: true   // ⭐ VERY IMPORTANT
+                releaseOnEdges: true,   // ⭐ VERY IMPORTANT
+                eventsTarget: ".swiper-slide" // ⭐ IMPORTANT
             },
 
             allowTouchMove: false,
@@ -380,7 +381,7 @@
 
 <script>
     const scrollableSections = document.querySelectorAll(
-        ".about-us, .contactMe, .services, .gallery"
+        ".about-us, .contactMe, .services, .gallery, .projects, .experience, .skills"
     );
 
     scrollableSections.forEach(section => {
