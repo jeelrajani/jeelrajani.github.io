@@ -619,3 +619,10 @@ form h2 .SocialLinks i:hover {
   margin-bottom: 10px;
   line-height: 1.6;
 }
+
+.contactinfos-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}

@@ -180,21 +180,23 @@
             </div>
             <div class="swiper-slide contactMe">
                 <h1 class="heading">Contact Me</h1>
-                <div class="contactinfo"><i class="fa-solid fa-phone"></i>
-                    <h3>Mobile No</h3>
-                    <p>123-456-7890</p>
-                </div>
-                <!-- <div class="contactinfo"><i class="fa-solid fa-location-dot"></i>
+                <div class="contactinfos-container">
+                    <div class="contactinfo"><i class="fa-solid fa-phone"></i>
+                        <h3>Mobile No</h3>
+                        <p>123-456-7890</p>
+                    </div>
+                    <!-- <div class="contactinfo"><i class="fa-solid fa-location-dot"></i>
                     <h3>Location</h3>
                     <p>Somewhere On Earth</p>
                 </div> -->
-                <div class="contactinfo"><i class="fa-regular fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>abc123@gmail.com</p>
-                </div>
-                <div class="contactinfo"><i class="fa-solid fa-globe"></i>
-                    <h3>Website</h3>
-                    <p>www.abc123.com</p>
+                    <div class="contactinfo"><i class="fa-regular fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>abc123@gmail.com</p>
+                    </div>
+                    <div class="contactinfo"><i class="fa-solid fa-globe"></i>
+                        <h3>Website</h3>
+                        <p>www.abc123.com</p>
+                    </div>
                 </div>
                 <form action="https://formspree.io/f/xkogggra" method="POST">
                     <h2>Send Me A Message <div class="SocialLinks">
@@ -205,9 +207,9 @@
                             <i class="fa-brands fa-facebook"></i>
                         </div>
                     </h2>
-                    <input type="text" placeholder="Name">
-                    <input type="text" placeholder="email">
-                    <textarea rows="10" placeholder="Type your Message Here..."></textarea>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="text" name="email" placeholder="email" required>
+                    <textarea rows="10" name="message" placeholder="Type your Message Here..." required></textarea>
                     <button class="primary">Send</button>
 
                 </form>
