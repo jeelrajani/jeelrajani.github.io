@@ -791,13 +791,13 @@ form h2 .SocialLinks i:hover {
 }
 
 /* Scrollbar */
-.education::-webkit-scrollbar {
+/* .education::-webkit-scrollbar {
   width: 6px;
 }
 .education::-webkit-scrollbar-thumb {
   background: #80ed99;
   border-radius: 10px;
-}
+} */
 
 .contactinfo p a {
   color: white;
