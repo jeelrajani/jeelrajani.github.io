@@ -624,5 +624,115 @@ form h2 .SocialLinks i:hover {
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin-top: 30px;
+}
+
+/* Skills */
+.skills {
+  padding: 80px 100px;
+  color: white;
+  overflow-y: auto;
+}
+
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+}
+
+.skill-group {
+  background: #212529;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.25s;
+}
+
+.skill-group:hover {
+  background: #80ed99;
+  color: #176d2d;
+}
+
+.skill-group h2 {
+  color: #80ed99;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.skill-group:hover h2 {
+  color: #176d2d;
+}
+
+.skill-group p {
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Scrollbar */
+.skills::-webkit-scrollbar {
+  width: 6px;
+}
+.skills::-webkit-scrollbar-thumb {
+  background: #80ed99;
+  border-radius: 10px;
+}
+
+/* Projects */
+.projects {
+  padding: 80px 100px;
+  color: white;
+  overflow-y: auto;
+}
+
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1000px;
+}
+
+.project-card {
+  background: #212529;
+  padding: 30px;
+  border-radius: 14px;
+  transition: 0.25s;
+}
+
+.project-card:hover {
+  background: #80ed99;
+  color: #176d2d;
+}
+
+.project-card h2 {
+  color: #80ed99;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.project-card:hover h2 {
+  color: #176d2d;
+}
+
+.project-card .tech {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+.project-card ul {
+  padding-left: 20px;
+}
+
+.project-card li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Scrollbar */
+.projects::-webkit-scrollbar {
+  width: 6px;
+}
+.projects::-webkit-scrollbar-thumb {
+  background: #80ed99;
+  border-radius: 10px;
 }

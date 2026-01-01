@@ -16,13 +16,19 @@
             <li onclick="Navigate(1)"><i class="fa-solid fa-user"></i>
                 <p>About Me</p>
             </li>
-            <li onclick="Navigate(2)"><i class="fa-solid fa-list"></i>
-                <p>Services</p>
+            <li onclick="Navigate(2)"><i class="fa-solid fa-cogs"></i>
+                <p>Skills</p>
             </li>
             <li onclick="Navigate(3)"><i class="fa-solid fa-briefcase"></i>
                 <p>Experience</p>
             </li>
-            <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i>
+            <li onclick="Navigate(4)"><i class="fa-solid fa-project-diagram"></i>
+                <p>Projects</p>
+            </li>
+            <li onclick="Navigate(5)"><i class="fa-solid fa-list"></i>
+                <p>Services</p>
+            </li>
+            <li onclick="Navigate(6)"><i class="fa-solid fa-comments"></i>
                 <p>Contact Me</p>
             </li>
         </ul>
@@ -116,6 +122,116 @@
                     </div>
                 </div>
             </div>
+            <div class="swiper-slide skills">
+                <h1 class="heading">Skills</h1>
+
+                <div class="skills-wrapper">
+
+                    <div class="skill-group">
+                        <h2>Backend & Logic</h2>
+                        <p>PHP, MVC Architecture, Backend Business Logic</p>
+                    </div>
+
+                    <div class="skill-group">
+                        <h2>APIs & Integrations</h2>
+                        <p>Third-party API Integration, REST APIs, JSON, XML</p>
+                    </div>
+
+                    <div class="skill-group">
+                        <h2>Database</h2>
+                        <p>MySQL, Complex Queries, Joins, Indexing, Query Optimization</p>
+                    </div>
+
+                    <div class="skill-group">
+                        <h2>Frontend (Supporting)</h2>
+                        <p>HTML, CSS, JavaScript (Basic), jQuery, AJAX</p>
+                    </div>
+
+                    <div class="skill-group">
+                        <h2>Tools & Workflow</h2>
+                        <p>Git, GitHub, GitLab, Postman, Jira</p>
+                    </div>
+
+                    <div class="skill-group">
+                        <h2>Deployment & Environment</h2>
+                        <p>Linux, Windows, cPanel, FTP, FileZilla</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="swiper-slide gallery experience">
+                <h1 class="heading">Work Experience</h1>
+
+                <div class="experience-content">
+
+                    <h3>Jr. PHP Developer</h3>
+                    <p class="company">
+                        <strong>Drop Techno Lab Private Limited</strong> | Ahmedabad
+                    </p>
+                    <p class="duration">Feb 2024 – Present</p>
+
+                    <ul class="experience-points">
+                        <li>Developed and maintained backend modules using PHP and MVC architecture</li>
+                        <li>Integrated third-party APIs for data verification, CRM sync, and external services</li>
+                        <li>Implemented authentication, role-based access control, and secure data handling</li>
+                        <li>Designed and optimized MySQL queries to improve performance</li>
+                        <li>Handled file uploads, email notifications, and cron jobs</li>
+                        <li>Used Git for version control and participated in code reviews</li>
+                        <li>Worked on multiple client projects with complex business workflows</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="swiper-slide projects">
+                <h1 class="heading">Projects</h1>
+
+                <div class="projects-wrapper">
+
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <h2>Multi-Vendor & Multi-Language E-Commerce Platform</h2>
+                        <p class="tech">
+                            <strong>Technology:</strong> PHP (MVC), CodeIgniter, MySQL
+                        </p>
+                        <ul>
+                            <li>Designed and developed a scalable multi-vendor e-commerce system</li>
+                            <li>Built a custom multi-language management system with dynamic language key generation
+                            </li>
+                            <li>Created user-friendly admin panels for content and vendor management</li>
+                            <li>Optimized database structure for performance and scalability</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <h2>Lender–Consumer Application Platform</h2>
+                        <p class="tech">
+                            <strong>Technology:</strong> Custom PHP Framework, MySQL, APIs
+                        </p>
+                        <ul>
+                            <li>Developed a complex backend system connecting lenders and borrower companies</li>
+                            <li>Integrated third-party services including Creditsafe and Companies House</li>
+                            <li>Implemented document uploads with cloud storage (BOX folders)</li>
+                            <li>Built a configurable decision engine for eligibility processing</li>
+                            <li>Developed multi-stage workflows and automated email reminders</li>
+                            <li>Integrated CRM platforms: Salesforce, HubSpot, Go High Level</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <h2>Dynamic Database Management System</h2>
+                        <p class="tech">
+                            <strong>Technology:</strong> PHP, MySQL
+                        </p>
+                        <ul>
+                            <li>Implemented dynamic creation and management of database structures</li>
+                            <li>Ensured data integrity and secure handling of generated schemas</li>
+                            <li>Optimized query execution for performance and reliability</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
             <div class="swiper-slide services">
 
                 <h1 class="heading">Services</h1>
@@ -153,29 +269,6 @@
                     <i class="fa-solid fa-code"></i>
                     <h2>Bug Fixing</h2>
                     <p>Debugging legacy and custom PHP systems.</p>
-                </div>
-            </div>
-            <div class="swiper-slide gallery experience">
-                <h1 class="heading">Experience</h1>
-
-                <div class="experience-content">
-                    <h2>Work Experience</h2>
-
-                    <h3>Jr. PHP Developer</h3>
-                    <p class="company">
-                        <strong>Drop Techno Lab Private Limited</strong> | Ahmedabad
-                    </p>
-                    <p class="duration">Feb 2024 – Present</p>
-
-                    <ul class="experience-points">
-                        <li>Developed and maintained backend modules using PHP and MVC architecture</li>
-                        <li>Integrated third-party APIs for data verification, CRM sync, and external services</li>
-                        <li>Implemented authentication, role-based access control, and secure data handling</li>
-                        <li>Designed and optimized MySQL queries to improve performance</li>
-                        <li>Handled file uploads, email notifications, and cron jobs</li>
-                        <li>Used Git for version control and participated in code reviews</li>
-                        <li>Worked on multiple client projects with complex business workflows</li>
-                    </ul>
                 </div>
             </div>
             <div class="swiper-slide contactMe">
