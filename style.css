@@ -825,17 +825,3 @@ form h2 .SocialLinks i:hover {
   border: 1px solid #80ed99;
 }
 
-/* All slides hidden by default */
-.swiper-cube .swiper-slide {
-  pointer-events: none;
-  visibility: hidden;
-  backface-visibility: hidden;
-}
-
-/* Active, next, prev slides visible */
-.swiper-cube .swiper-slide-active,
-.swiper-cube .swiper-slide-next,
-.swiper-cube .swiper-slide-prev {
-  pointer-events: auto;
-  visibility: visible;
-}
