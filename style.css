@@ -1,26 +1,28 @@
-body {
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
+.hero {
+  background: url("bg.jpg") center center / cover no-repeat;
+  height: 100vh;
+  position: relative;
 }
 
-header {
-  background: linear-gradient(135deg, #1f2933, #111827);
-  color: #fff;
-  padding: 50px 20px;
+.overlay {
+  background: rgba(0, 0, 0, 0.7); /* dark overlay */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  color: white;
+  padding: 20px;
 }
 
-header h1 {
-  margin-bottom: 5px;
-  font-size: 36px;
+.overlay h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
-header p {
-  font-size: 18px;
+.overlay p {
+  font-size: 20px;
   opacity: 0.9;
 }
 
