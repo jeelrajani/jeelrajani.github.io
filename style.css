@@ -810,7 +810,9 @@ form h2 .SocialLinks i:hover {
 /* Allow clicks inside Contact slide */
 .contactMe,
 .contactMe * {
-  pointer-events: auto;
+  pointer-events: auto !important;
+  visibility: visible !important;
+  backface-visibility: visible !important;
 }
 
 .contactMe {
@@ -822,4 +824,3 @@ form h2 .SocialLinks i:hover {
   outline: none;
   border: 1px solid #80ed99;
 }
-
