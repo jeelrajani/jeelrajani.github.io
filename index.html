@@ -419,8 +419,8 @@
                 (delta > 0 && !atBottom)   // scrolling down inside content
             ) {
                 e.stopPropagation();      // stop Swiper
-                e.preventDefault();       // allow native scroll
-                this.scrollTop += delta;
+                // e.preventDefault();       // allow native scroll
+                // this.scrollTop += delta;
             }
         }, { passive: false });
     });
