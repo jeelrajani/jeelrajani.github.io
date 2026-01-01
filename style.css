@@ -813,14 +813,6 @@ form h2 .SocialLinks i:hover {
   pointer-events: auto;
 }
 
-/* Prevent Swiper from blocking interactions */
-.swiper-slide {
-  pointer-events: none;
-}
-
-.swiper-slide-active {
-  pointer-events: auto;
-}
 .contactMe {
   position: relative;
   z-index: 10;
