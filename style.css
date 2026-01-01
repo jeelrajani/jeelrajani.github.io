@@ -798,3 +798,7 @@ form h2 .SocialLinks i:hover {
 .contactinfos-container .contactinfo a:hover {
   text-decoration: underline;
 }
+
+.contactMe {
+  z-index: 999; /* inputs stay above cube slide */
+}
