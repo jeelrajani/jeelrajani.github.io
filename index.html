@@ -371,29 +371,17 @@
         });
 
         /* 🔥 FIX: Disable cube when Contact slide is active */
-        // swiper.on("slideChangeTransitionStart", () => {
-        //     const activeSlide = swiper.slides[swiper.activeIndex];
-
-        //     if (activeSlide.classList.contains("contactMe")) {
-        //         swiper.params.effect = "slide";
-        //         swiper.update();
-        //     } else {
-        //         swiper.params.effect = "cube";
-        //         swiper.update();
-        //     }
-        // });
-
-
         swiper.on("slideChangeTransitionStart", () => {
-            const active = swiper.slides[swiper.activeIndex];
+            const activeSlide = swiper.slides[swiper.activeIndex];
 
-            swiper.params.effect = active.classList.contains("contactMe")
-                ? "slide"
-                : "cube";
-
-            swiper.update();
+            if (activeSlide.classList.contains("contactMe")) {
+                swiper.params.effect = "slide";
+                swiper.update();
+            } else {
+                swiper.params.effect = "cube";
+                swiper.update();
+            }
         });
-
 
     });
 
@@ -434,8 +422,8 @@
                 (delta > 0 && !atBottom)   // scrolling down inside content
             ) {
                 e.stopPropagation();      // stop Swiper
-                // e.preventDefault();       // allow native scroll
-                // this.scrollTop += delta;
+                e.preventDefault();       // allow native scroll
+                this.scrollTop += delta;
             }
         }, { passive: false });
     });

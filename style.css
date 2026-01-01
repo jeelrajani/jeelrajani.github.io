@@ -823,8 +823,3 @@ form h2 .SocialLinks i:hover {
   border: 1px solid #80ed99;
 }
 
-.contactMe {
-  transform: none !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-}
