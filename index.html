@@ -162,7 +162,7 @@
 
                 </div>
             </div>
-            <div class="swiper-slide gallery experience">
+            <div class="swiper-slide experience">
                 <h1 class="heading">Work Experience</h1>
 
                 <div class="experience-content">
@@ -385,15 +385,24 @@
 
     });
 
+    // function Navigate(indx) {
+    //     document.querySelectorAll(".Links li")
+    //         .forEach(li => li.classList.remove("activeLink"));
+
+    //     document.querySelectorAll(".Links li")[indx]
+    //         .classList.add("activeLink");
+
+    //     swiper.slideTo(indx, 700, true);
+    // }
+
     function Navigate(indx) {
-        document.querySelectorAll(".Links li")
-            .forEach(li => li.classList.remove("activeLink"));
+        document.querySelectorAll(".Links li").forEach(li => li.classList.remove("activeLink"));
+        document.querySelectorAll(".Links li")[indx].classList.add("activeLink");
 
-        document.querySelectorAll(".Links li")[indx]
-            .classList.add("activeLink");
-
-        swiper.slideTo(indx, 700, true);
+        swiper.slideTo(indx, 700, true); // go to slide
+        swiper.update();                  // force Swiper to recalc cube
     }
+
 </script>
 
 <script>
@@ -407,7 +416,7 @@
 
 <script>
     const scrollableSections = document.querySelectorAll(
-        ".about-us, .contactMe, .services, .gallery, .projects, .experience, .skills"
+        ".about-us, .contactMe, .services, .projects, .experience, .skills"
     );
 
     scrollableSections.forEach(section => {
