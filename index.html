@@ -212,12 +212,22 @@
     document.addEventListener("DOMContentLoaded", function () {
 
         swiper = new Swiper(".swiper", {
-            // direction: "vertical",
-            effect: "cube",          // ✅ normal slide
-            speed: 600,
+            effect: "cube",
+            direction: "vertical",
+            speed: 700,
+
+            cubeEffect: {
+                shadow: false,
+                slideShadows: false
+            },
+
+            mousewheel: {
+                forceToAxis: true,
+                sensitivity: 1
+            },
+
             allowTouchMove: false,
             grabCursor: false,
-            mousewheel: true,
             keyboard: {
                 enabled: true
             }
@@ -233,7 +243,6 @@
 
     });
 
-    // ✅ MUST be global
     function Navigate(indx) {
         document.querySelectorAll(".Links li")
             .forEach(li => li.classList.remove("activeLink"));
@@ -241,14 +250,33 @@
         document.querySelectorAll(".Links li")[indx]
             .classList.add("activeLink");
 
-        swiper.slideTo(indx, 600, true);
+        swiper.slideTo(indx, 700, true);
     }
 </script>
+
 <script>
     const toggle = document.querySelector(".menu-toggle");
     const sidebar = document.querySelector("aside");
 
     toggle.addEventListener("click", () => {
         sidebar.classList.toggle("active");
+    });
+</script>
+
+<script>
+    document.querySelectorAll(
+        ".about-us, .contactMe, .services, .gallery"
+    ).forEach(section => {
+
+        section.addEventListener("wheel", function (e) {
+            const atTop = this.scrollTop === 0;
+            const atBottom =
+                this.scrollHeight - this.scrollTop === this.clientHeight;
+
+            if (!atTop && !atBottom) {
+                e.stopPropagation(); // 🔥 prevents slide change
+            }
+        }, { passive: false });
+
     });
 </script>
