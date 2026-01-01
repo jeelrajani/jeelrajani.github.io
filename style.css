@@ -798,3 +798,35 @@ form h2 .SocialLinks i:hover {
   background: #80ed99;
   border-radius: 10px;
 }
+
+.contactinfo p a {
+  color: white;
+  text-decoration: none;
+}
+.contactinfo p a:hover {
+  text-decoration: underline;
+}
+
+/* Allow clicks inside Contact slide */
+.contactMe,
+.contactMe * {
+  pointer-events: auto;
+}
+
+/* Prevent Swiper from blocking interactions */
+.swiper-slide {
+  pointer-events: none;
+}
+
+.swiper-slide-active {
+  pointer-events: auto;
+}
+.contactMe {
+  position: relative;
+  z-index: 10;
+}
+.contactMe input:focus,
+.contactMe textarea:focus {
+  outline: none;
+  border: 1px solid #80ed99;
+}
