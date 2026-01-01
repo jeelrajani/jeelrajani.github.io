@@ -789,3 +789,12 @@ form h2 .SocialLinks i:hover {
   line-height: 1.6;
   font-weight: 300;
 }
+
+.contactinfos-container .contactinfo a {
+  text-decoration: none;
+  color: white;
+}
+
+.contactinfos-container .contactinfo a:hover {
+  text-decoration: underline;
+}
