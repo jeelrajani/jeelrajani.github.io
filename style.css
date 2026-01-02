@@ -897,7 +897,7 @@ form h2 .SocialLinks i:hover {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #00e5ff, transparent);
+  background: linear-gradient(to bottom, #80ed99, transparent);
 }
 
 .timeline-item {
@@ -911,9 +911,9 @@ form h2 .SocialLinks i:hover {
   top: 8px;
   width: 14px;
   height: 14px;
-  background: #00e5ff;
+  background: #80ed99;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
+  box-shadow: 0 0 10px rgba(128, 237, 153);
 }
 
 .timeline-content {
@@ -937,7 +937,7 @@ form h2 .SocialLinks i:hover {
   display: inline-block;
   margin: 8px 0 14px;
   font-size: 13px;
-  color: #00e5ff;
+  color: #80ed99;
 }
 
 .timeline-content ul {
