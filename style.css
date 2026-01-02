@@ -803,39 +803,3 @@ form h2 .SocialLinks i:hover {
   z-index: 999 !important; /* inputs stay above cube slide */
 }
 
-/* === */
-/* ✅ FIX: Allow interaction inside active cube slide */
-.swiper-cube .swiper-slide-active,
-.swiper-cube .swiper-slide-active * {
-  pointer-events: auto !important;
-  visibility: visible;
-}
-
-/* Disable interaction for inactive slides */
-.swiper-cube .swiper-slide {
-  pointer-events: none;
-}
-
-/* Inputs must stay interactive */
-.contactMe input,
-.contactMe textarea,
-.contactMe button,
-.contactMe a {
-  pointer-events: auto !important;
-  position: relative;
-  z-index: 10;
-}
-/* === */
-.contactMe {
-  overflow-y: auto;
-  height: 100%;
-}
-
-.contactMe form,
-.contactMe input,
-.contactMe textarea,
-.contactMe button {
-  pointer-events: auto;
-  z-index: 9999;
-  position: relative;
-}

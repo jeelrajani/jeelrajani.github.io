@@ -381,19 +381,6 @@
                 .classList.add("activeLink");
         });
 
-        const contactSlide = document.querySelector(".contactMe");
-
-        contactSlide.addEventListener("mouseenter", () => {
-            swiper.mousewheel.disable();
-            swiper.allowTouchMove = false;
-        });
-
-        contactSlide.addEventListener("mouseleave", () => {
-            swiper.mousewheel.enable();
-            swiper.allowTouchMove = false; // keep disabled if you want
-        });
-
-
     });
 
     function Navigate(indx) {
@@ -417,59 +404,25 @@
 </script>
 
 <script>
-    // const scrollableSections = document.querySelectorAll(
-    //     ".about-us, .contactMe, .services, .gallery, .projects, .experience, .skills"
-    // );
-
-    // scrollableSections.forEach(section => {
-    //     section.addEventListener("wheel", function (e) {
-    //         const delta = e.deltaY;
-    //         const atTop = this.scrollTop === 0;
-    //         const atBottom =
-    //             Math.ceil(this.scrollTop + this.clientHeight) >= this.scrollHeight;
-
-    //         if (
-    //             (delta < 0 && !atTop) ||   // scrolling up inside content
-    //             (delta > 0 && !atBottom)   // scrolling down inside content
-    //         ) {
-    //             e.stopPropagation();      // stop Swiper
-    //             e.preventDefault();       // allow native scroll
-    //             this.scrollTop += delta;
-    //         }
-    //     }, { passive: false });
-    // });
-
     const scrollableSections = document.querySelectorAll(
         ".about-us, .contactMe, .services, .gallery, .projects, .experience, .skills"
     );
 
     scrollableSections.forEach(section => {
-        section.addEventListener(
-            "wheel",
-            function (e) {
-                if (
-                    e.target.tagName === "INPUT" ||
-                    e.target.tagName === "TEXTAREA" ||
-                    e.target.tagName === "BUTTON" ||
-                    e.target.tagName === "A"
-                ) {
-                    return;
-                }
+        section.addEventListener("wheel", function (e) {
+            const delta = e.deltaY;
+            const atTop = this.scrollTop === 0;
+            const atBottom =
+                Math.ceil(this.scrollTop + this.clientHeight) >= this.scrollHeight;
 
-                const delta = e.deltaY;
-                const atTop = this.scrollTop === 0;
-                const atBottom =
-                    Math.ceil(this.scrollTop + this.clientHeight) >= this.scrollHeight;
-
-                if (
-                    (delta < 0 && !atTop) ||
-                    (delta > 0 && !atBottom)
-                ) {
-                    e.stopPropagation(); // stop Swiper
-                    this.scrollTop += delta;
-                }
-            },
-            { passive: true }
-        );
+            if (
+                (delta < 0 && !atTop) ||   // scrolling up inside content
+                (delta > 0 && !atBottom)   // scrolling down inside content
+            ) {
+                e.stopPropagation();      // stop Swiper
+                e.preventDefault();       // allow native scroll
+                this.scrollTop += delta;
+            }
+        }, { passive: false });
     });
 </script>
