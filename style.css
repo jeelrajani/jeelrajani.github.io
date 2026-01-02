@@ -681,13 +681,13 @@ form h2 .SocialLinks i:hover {
 }
 
 /* Projects */
-/* .projects {
+.projects {
   padding: 80px 100px;
   color: white;
   overflow-y: auto;
 }
 
-.projects-wrapper {
+/* .projects-wrapper {
   display: flex;
   flex-direction: column;
   gap: 30px;
