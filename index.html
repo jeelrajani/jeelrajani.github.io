@@ -381,6 +381,19 @@
                 .classList.add("activeLink");
         });
 
+        const contactSlide = document.querySelector(".contactMe");
+
+        contactSlide.addEventListener("mouseenter", () => {
+            swiper.mousewheel.disable();
+            swiper.allowTouchMove = false;
+        });
+
+        contactSlide.addEventListener("mouseleave", () => {
+            swiper.mousewheel.enable();
+            swiper.allowTouchMove = false; // keep disabled if you want
+        });
+
+
     });
 
     function Navigate(indx) {
