@@ -503,6 +503,33 @@
                 .classList.add("activeLink");
         });
 
+        swiper.on("slideChangeTransitionEnd", function () {
+            const activeSlide = document.querySelector(".swiper-slide-active");
+
+            if (!activeSlide) return;
+
+            // EXPERIENCE SLIDE
+            if (activeSlide.classList.contains("experience")) {
+
+                // Animate timeline items
+                const items = activeSlide.querySelectorAll(".animate");
+                items.forEach((item, index) => {
+                    item.classList.remove("show");
+                    setTimeout(() => {
+                        item.classList.add("show");
+                    }, index * 180);
+                });
+
+                // Animate timeline progress
+                const timeline = activeSlide.querySelector(".timeline");
+                const progress = activeSlide.querySelector(".timeline-progress");
+
+                if (timeline && progress) {
+                    progress.style.height = timeline.scrollHeight + "px";
+                }
+            }
+        });
+
     });
 
     function Navigate(indx) {
@@ -582,34 +609,6 @@
                     startTyping();
                 }
             });
-        }
-    });
-</script>
-<script>
-    swiper.on("slideChangeTransitionEnd", function () {
-        const activeSlide = document.querySelector(".swiper-slide-active");
-
-        if (!activeSlide) return;
-
-        // EXPERIENCE SLIDE
-        if (activeSlide.classList.contains("experience")) {
-
-            // Animate timeline items
-            const items = activeSlide.querySelectorAll(".animate");
-            items.forEach((item, index) => {
-                item.classList.remove("show");
-                setTimeout(() => {
-                    item.classList.add("show");
-                }, index * 180);
-            });
-
-            // Animate timeline progress
-            const timeline = activeSlide.querySelector(".timeline");
-            const progress = activeSlide.querySelector(".timeline-progress");
-
-            if (timeline && progress) {
-                progress.style.height = timeline.scrollHeight + "px";
-            }
         }
     });
 </script>
