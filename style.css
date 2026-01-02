@@ -876,3 +876,113 @@ form h2 .SocialLinks i:hover {
 .project-content li {
   margin-bottom: 6px;
 }
+
+/* experience new */
+/* EXPERIENCE TIMELINE */
+.experience {
+  padding: 60px 40px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #00e5ff, transparent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background: #00e5ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 20px 25px;
+  backdrop-filter: blur(8px);
+}
+
+.timeline-content h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+.company {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.duration {
+  display: inline-block;
+  margin: 8px 0 14px;
+  font-size: 13px;
+  color: #00e5ff;
+}
+
+.timeline-content ul {
+  padding-left: 18px;
+}
+
+.timeline-content li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* FUTURE / MUTED */
+.timeline-item.muted .timeline-dot {
+  background: #888;
+  box-shadow: none;
+}
+
+.timeline-item.muted .timeline-content {
+  opacity: 0.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .experience {
+    padding: 40px 20px;
+  }
+
+  .timeline {
+    padding-left: 30px;
+  }
+}
+/* EXPERIENCE */
+
+.company-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  padding: 6px;
+}
