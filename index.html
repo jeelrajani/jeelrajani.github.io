@@ -53,7 +53,9 @@
             <div class="swiper-slide home-slide">
                 <div class="HomeContent">
                     <h1>Hi! I'm <span class="stylized-name">Jeel</span>,</h1>
-                    <h2>A <span class="proffesions"></span></h2>
+                    <h2>
+                        A <span class="proffesions" id="typing-text"></span>
+                    </h2>
 
                     <p class="heroline">
                         I build secure, scalable backend systems using PHP,
@@ -435,17 +437,38 @@
     });
 </script>
 <script>
-    const text = "Backend Developer";
-    const typingElement = document.getElementById("typing-text");
-    let index = 0;
+    document.addEventListener("DOMContentLoaded", () => {
+        const text = "Backend Developer";
+        let index = 0;
 
-    function typeEffect() {
-        if (index < text.length) {
-            typingElement.textContent += text.charAt(index);
-            index++;
-            setTimeout(typeEffect, 100);
+        function startTyping() {
+            const el = document.getElementById("typing-text");
+            if (!el) return; // ✅ prevents error
+
+            el.textContent = ""; // reset
+
+            function type() {
+                if (index < text.length) {
+                    el.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, 100);
+                }
+            }
+
+            type();
         }
-    }
 
-    typeEffect();
+        // Run once on page load
+        startTyping();
+
+        // Run again when Home slide becomes active
+        if (typeof swiper !== "undefined") {
+            swiper.on("slideChange", () => {
+                if (swiper.activeIndex === 0) {
+                    index = 0;
+                    startTyping();
+                }
+            });
+        }
+    });
 </script>
