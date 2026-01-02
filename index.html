@@ -443,29 +443,30 @@
 
         function startTyping() {
             const el = document.getElementById("typing-text");
-            if (!el) return; // ✅ prevents error
+            if (!el) return;
 
-            el.textContent = ""; // reset
+            el.textContent = "";
+            el.classList.remove("cursor-hide");
+            index = 0;
 
             function type() {
                 if (index < text.length) {
                     el.textContent += text.charAt(index);
                     index++;
                     setTimeout(type, 100);
+                } else {
+                    el.classList.add("cursor-hide");
                 }
             }
 
             type();
         }
 
-        // Run once on page load
         startTyping();
 
-        // Run again when Home slide becomes active
         if (typeof swiper !== "undefined") {
             swiper.on("slideChange", () => {
                 if (swiper.activeIndex === 0) {
-                    index = 0;
                     startTyping();
                 }
             });

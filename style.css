@@ -809,4 +809,15 @@ form h2 .SocialLinks i:hover {
   border-right: 3px solid #85f69f;
   padding-right: 5px;
   white-space: nowrap;
+  animation: blink 1s step-end infinite;
+}
+
+.proffesions.cursor-hide {
+  border-right: none;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
