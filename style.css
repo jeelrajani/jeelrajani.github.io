@@ -800,5 +800,5 @@ form h2 .SocialLinks i:hover {
 }
 
 .contactMe {
-  z-index: 999; /* inputs stay above cube slide */
+  z-index: 999 !important; /* inputs stay above cube slide */
 }
