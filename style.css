@@ -31,6 +31,10 @@ aside {
   border-right: 1px solid #80ed9970;
 }
 
+.swiper-3d .swiper-wrapper {
+  border-bottom: 1px solid #80ed9970 !important;
+}
+
 .Links {
   display: flex;
   flex-direction: column;
