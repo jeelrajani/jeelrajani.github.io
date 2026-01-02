@@ -886,10 +886,11 @@ form h2 .SocialLinks i:hover {
 .timeline {
   position: relative;
   max-width: 900px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding-left: 40px;
 }
 
+/* Background line */
 .timeline::before {
   content: "";
   position: absolute;
@@ -897,7 +898,18 @@ form h2 .SocialLinks i:hover {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #80ed99, transparent);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Animated progress line */
+.timeline-progress {
+  position: absolute;
+  left: 14px;
+  top: 0;
+  width: 2px;
+  height: 0;
+  background: linear-gradient(to bottom, #00e5ff, #80ed99);
+  transition: height 1.2s ease;
 }
 
 .timeline-item {
@@ -985,4 +997,27 @@ form h2 .SocialLinks i:hover {
   border-radius: 8px;
   background: #fff;
   padding: 6px;
+}
+
+.company-info {
+  flex: 1;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.company-link {
+  margin-left: auto;
+  color: #00e5ff;
+  font-size: 14px;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.company-link:hover {
+  transform: translateY(-2px);
+  color: #80ed99;
 }

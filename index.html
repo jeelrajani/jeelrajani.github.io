@@ -200,6 +200,7 @@
                 <h1 class="heading">Work Experience</h1>
 
                 <div class="timeline">
+                    <div class="timeline-progress"></div>
 
                     <div class="timeline-item animate">
                         <div class="timeline-dot"></div>
@@ -212,6 +213,9 @@
                                     <h3>Jr. PHP Developer</h3>
                                     <p class="company">
                                         <strong>Drop Techno Lab Private Limited</strong> • Ahmedabad
+                                        <a href="https://www.droptechnolab.com" target="_blank" class="company-link">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
                                     </p>
                                     <span class="duration">Feb 2024 – Present</span>
                                 </div>
@@ -238,6 +242,9 @@
                                     <h3>Intern PHP Developer</h3>
                                     <p class="company">
                                         <strong>Drop Techno Lab Private Limited</strong> • Ahmedabad
+                                        <a href="https://www.droptechnolab.com" target="_blank" class="company-link">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
                                     </p>
                                     <span class="duration">Internship</span>
                                 </div>
@@ -575,6 +582,34 @@
                     startTyping();
                 }
             });
+        }
+    });
+</script>
+<script>
+    swiper.on("slideChangeTransitionEnd", function () {
+        const activeSlide = document.querySelector(".swiper-slide-active");
+
+        if (!activeSlide) return;
+
+        // EXPERIENCE SLIDE
+        if (activeSlide.classList.contains("experience")) {
+
+            // Animate timeline items
+            const items = activeSlide.querySelectorAll(".animate");
+            items.forEach((item, index) => {
+                item.classList.remove("show");
+                setTimeout(() => {
+                    item.classList.add("show");
+                }, index * 180);
+            });
+
+            // Animate timeline progress
+            const timeline = activeSlide.querySelector(".timeline");
+            const progress = activeSlide.querySelector(".timeline-progress");
+
+            if (timeline && progress) {
+                progress.style.height = timeline.scrollHeight + "px";
+            }
         }
     });
 </script>
