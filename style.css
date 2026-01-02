@@ -802,3 +802,12 @@ form h2 .SocialLinks i:hover {
 .contactMe {
   z-index: 999 !important; /* inputs stay above cube slide */
 }
+
+.SocialLinks a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.SocialLinks i {
+  cursor: pointer;
+}
