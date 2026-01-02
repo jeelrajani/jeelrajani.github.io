@@ -404,25 +404,59 @@
 </script>
 
 <script>
+    // const scrollableSections = document.querySelectorAll(
+    //     ".about-us, .contactMe, .services, .gallery, .projects, .experience, .skills"
+    // );
+
+    // scrollableSections.forEach(section => {
+    //     section.addEventListener("wheel", function (e) {
+    //         const delta = e.deltaY;
+    //         const atTop = this.scrollTop === 0;
+    //         const atBottom =
+    //             Math.ceil(this.scrollTop + this.clientHeight) >= this.scrollHeight;
+
+    //         if (
+    //             (delta < 0 && !atTop) ||   // scrolling up inside content
+    //             (delta > 0 && !atBottom)   // scrolling down inside content
+    //         ) {
+    //             e.stopPropagation();      // stop Swiper
+    //             e.preventDefault();       // allow native scroll
+    //             this.scrollTop += delta;
+    //         }
+    //     }, { passive: false });
+    // });
+
     const scrollableSections = document.querySelectorAll(
         ".about-us, .contactMe, .services, .gallery, .projects, .experience, .skills"
     );
 
     scrollableSections.forEach(section => {
-        section.addEventListener("wheel", function (e) {
-            const delta = e.deltaY;
-            const atTop = this.scrollTop === 0;
-            const atBottom =
-                Math.ceil(this.scrollTop + this.clientHeight) >= this.scrollHeight;
+        section.addEventListener(
+            "wheel",
+            function (e) {
+                if (
+                    e.target.tagName === "INPUT" ||
+                    e.target.tagName === "TEXTAREA" ||
+                    e.target.tagName === "BUTTON" ||
+                    e.target.tagName === "A"
+                ) {
+                    return;
+                }
 
-            if (
-                (delta < 0 && !atTop) ||   // scrolling up inside content
-                (delta > 0 && !atBottom)   // scrolling down inside content
-            ) {
-                e.stopPropagation();      // stop Swiper
-                e.preventDefault();       // allow native scroll
-                this.scrollTop += delta;
-            }
-        }, { passive: false });
+                const delta = e.deltaY;
+                const atTop = this.scrollTop === 0;
+                const atBottom =
+                    Math.ceil(this.scrollTop + this.clientHeight) >= this.scrollHeight;
+
+                if (
+                    (delta < 0 && !atTop) ||
+                    (delta > 0 && !atBottom)
+                ) {
+                    e.stopPropagation(); // stop Swiper
+                    this.scrollTop += delta;
+                }
+            },
+            { passive: true }
+        );
     });
 </script>
