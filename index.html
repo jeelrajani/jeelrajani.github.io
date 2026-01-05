@@ -892,18 +892,6 @@
             }
         });
 
-        const footer = document.getElementById("siteFooter");
-        swiper.on("slideChange", () => {
-            if (swiper.activeIndex === 0) {
-                footer.classList.add("show");
-            } else {
-                footer.classList.remove("show");
-            }
-        });
-        // Show on initial load (home slide)
-        if (swiper.activeIndex === 0) {
-            footer.classList.add("show");
-        }
     });
 
     function Navigate(indx) {
