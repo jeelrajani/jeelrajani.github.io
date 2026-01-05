@@ -930,7 +930,7 @@ form h2 .SocialLinks i:hover {
 }
 
 .timeline-content {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 20px 25px;
   backdrop-filter: blur(8px);
@@ -949,7 +949,7 @@ form h2 .SocialLinks i:hover {
 .duration {
   display: inline-block;
   margin: 8px 0 14px;
-  font-size: 13px;
+  font-size: 14px;
   color: #80ed99;
 }
 
@@ -961,6 +961,7 @@ form h2 .SocialLinks i:hover {
   margin-bottom: 8px;
   font-size: 14px;
   line-height: 1.6;
+  font-size: 16px;
 }
 
 /* FUTURE / MUTED */
