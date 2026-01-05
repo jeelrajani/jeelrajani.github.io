@@ -90,6 +90,7 @@
                 <p class="slide-help">Scroll for next slide <i class="fa-solid fa-chevron-down fa-shake"></i>
                 </p>
             </div>
+
             <!-- <div class="swiper-slide">
                 <div class="about-us">
                     <h1 class="heading">About Me</h1>
@@ -605,7 +606,7 @@
                 </div>
             </div>
 
-            <div class="swiper-slide services">
+            <!-- <div class="swiper-slide services">
 
                 <h1 class="heading">Services</h1>
                 <div class="service">
@@ -643,7 +644,77 @@
                     <h2>Bug Fixing</h2>
                     <p>Debugging legacy and custom PHP systems.</p>
                 </div>
+            </div> -->
+
+            <div class="swiper-slide services">
+                <h1 class="heading">Services</h1>
+
+                <div class="services-grid">
+
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h2>Backend Development</h2>
+                        <p>
+                            Scalable, secure backend systems using PHP, MVC architecture, and MySQL.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-plug"></i>
+                        </div>
+                        <h2>API Development</h2>
+                        <p>
+                            REST APIs, third-party integrations, authentication, and data services.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <h2>Custom Business Logic</h2>
+                        <p>
+                            Complex workflows, automation, rule engines, and backend processes.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h2>Security & Validation</h2>
+                        <p>
+                            Role-based access, secure auth, input validation, and SQL protection.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h2>Performance Optimization</h2>
+                        <p>
+                            Query optimization, indexing, caching, and backend performance tuning.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h2>Bug Fixing & Support</h2>
+                        <p>
+                            Debugging legacy code, fixing production issues, and system stability.
+                        </p>
+                    </div>
+
+                </div>
             </div>
+
+
             <div class="swiper-slide contactMe" id="goToContact">
                 <h1 class="heading">Contact Me</h1>
                 <div class="contactinfos-container">
@@ -799,6 +870,18 @@
         setTimeout(() => {
             document.querySelector('.cv-btn')?.classList.remove('pulse');
         }, 6000);
+
+        swiper.on("slideChange", () => {
+            document.querySelectorAll(".service-card").forEach(card => {
+                card.classList.remove("show");
+            });
+
+            if (swiper.slides[swiper.activeIndex].classList.contains("services")) {
+                document.querySelectorAll(".service-card").forEach((card, i) => {
+                    setTimeout(() => card.classList.add("show"), i * 120);
+                });
+            }
+        });
 
     });
 
