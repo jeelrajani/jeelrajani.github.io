@@ -63,11 +63,17 @@
                     </p>
 
                     <div class="buttonGroup">
-                        <a href="Jeel_Rajani_CV.pdf" download class="primary cv-btn">
+                        <a href="Jeel_Rajani_CV.pdf" download class="primary cv-btn pulse">
                             <i class="fa-solid fa-download"></i>
                             Download CV
                         </a>
+
+                        <a href="#contact" class="secondary contact-btn">
+                            <i class="fa-solid fa-envelope"></i>
+                            Contact Me
+                        </a>
                     </div>
+
                 </div>
                 <div class="SideImg">
                     <div class="top-right-corner">
@@ -788,6 +794,10 @@
                 setTimeout(() => el.classList.add("show"), i * 150);
             });
         });
+
+        setTimeout(() => {
+            document.querySelector('.cv-btn')?.classList.remove('pulse');
+        }, 6000);
 
     });
 

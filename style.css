@@ -1364,3 +1364,59 @@ form h2 .SocialLinks i:hover {
 .cv-btn i {
   font-size: 1rem;
 }
+
+.buttonGroup {
+  margin-top: 25px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.secondary {
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: 2px solid #80ed99;
+  background: transparent;
+  color: #80ed99;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.secondary:hover {
+  background: #80ed99;
+  color: #0f172a;
+  transform: translateY(-2px);
+}
+
+.contact-btn i {
+  margin-right: 8px;
+}
+
+.pulse {
+  position: relative;
+}
+
+.pulse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background: rgba(128, 237, 153, 0.6);
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
