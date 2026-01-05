@@ -136,7 +136,7 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide skills">
+            <!-- <div class="swiper-slide skills">
                 <h1 class="heading">Skills</h1>
 
                 <div class="skills-wrapper">
@@ -172,7 +172,99 @@
                     </div>
 
                 </div>
+            </div> -->
+
+            <div class="swiper-slide skills">
+                <h1 class="heading">Skills</h1>
+
+                <div class="skills-unique">
+
+                    <div class="skill-radar animate">
+                        <svg viewBox="0 0 200 200">
+                            <circle cx="100" cy="100" r="80" />
+                            <circle cx="100" cy="100" r="60" />
+                            <circle cx="100" cy="100" r="40" />
+
+                            <!-- Skill polygon -->
+                            <polygon class="skill-shape" points="100,20 170,70 150,140 100,170 50,140 30,70" />
+                        </svg>
+
+                        <div class="radar-labels">
+                            <span>Backend</span>
+                            <span>APIs</span>
+                            <span>DB</span>
+                            <span>Frontend</span>
+                            <span>Tools</span>
+                            <span>Deploy</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-categories">
+
+                        <div class="skill-block animate">
+                            <h3><i class="fa-solid fa-server"></i> Backend & Logic</h3>
+                            <div class="tech-tags">
+                                <span>PHP</span>
+                                <span>MVC</span>
+                                <span>Business Logic</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-block animate">
+                            <h3><i class="fa-solid fa-plug"></i> APIs & Integrations</h3>
+                            <div class="tech-tags">
+                                <span>REST</span>
+                                <span>JSON</span>
+                                <span>XML</span>
+                                <span>Third-Party APIs</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-block animate">
+                            <h3><i class="fa-solid fa-database"></i> Database</h3>
+                            <div class="tech-tags">
+                                <span>MySQL</span>
+                                <span>Joins</span>
+                                <span>Indexes</span>
+                                <span>Optimization</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-block animate">
+                            <h3><i class="fa-solid fa-code"></i> Frontend (Supporting)</h3>
+                            <div class="tech-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>AJAX</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-block animate">
+                            <h3><i class="fa-solid fa-toolbox"></i> Tools & Workflow</h3>
+                            <div class="tech-tags">
+                                <span>Git</span>
+                                <span>GitHub</span>
+                                <span>Postman</span>
+                                <span>Jira</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-block animate">
+                            <h3><i class="fa-solid fa-cloud"></i> Deployment</h3>
+                            <div class="tech-tags">
+                                <span>Linux</span>
+                                <span>cPanel</span>
+                                <span>FTP</span>
+                                <span>FileZilla</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+
+
             <!-- <div class="swiper-slide gallery experience">
                 <h1 class="heading">Work Experience</h1>
 
@@ -592,6 +684,16 @@
             }
         });
 
+        swiper.on("slideChangeTransitionEnd", function () {
+            const active = document.querySelector(".swiper-slide-active.skills");
+            if (!active) return;
+
+            active.querySelector(".skill-radar")?.classList.add("show");
+
+            active.querySelectorAll(".skill-block").forEach((el, i) => {
+                setTimeout(() => el.classList.add("show"), i * 120);
+            });
+        });
 
     });
 
