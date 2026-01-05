@@ -255,7 +255,7 @@
                 </div>
             </div>
 
-            <div class="swiper-slide education">
+            <!-- <div class="swiper-slide education">
                 <h1 class="heading">Education</h1>
                 <div class="education-wrapper">
                     <div class="education-card">
@@ -273,6 +273,51 @@
                         </p>
                         <p class="duration">2019 – 2022</p>
                     </div>
+                </div>
+            </div> -->
+
+            <div class="swiper-slide education">
+                <h1 class="heading">Education</h1>
+
+                <div class="edu-timeline">
+
+                    <div class="edu-item animate">
+                        <div class="edu-dot">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <div class="edu-card">
+                            <h2>Master of Computer Applications (MCA)</h2>
+                            <p class="edu-institute">
+                                <strong>LJ University</strong>
+                                <a href="https://ljku.edu.in" target="_blank" class="edu-link">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </p>
+                            <span class="edu-duration">2022 – 2024</span>
+                            <p class="edu-location">Ahmedabad, India</p>
+                        </div>
+                    </div>
+
+                    <div class="edu-item animate">
+                        <div class="edu-dot">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <div class="edu-card">
+                            <h2>Bachelor of Commerce (Hons.)</h2>
+                            <p class="edu-institute">
+                                <strong>Marwadi University</strong>
+                                <a href="https://www.marwadiuniversity.ac.in" target="_blank" class="edu-link">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </p>
+                            <span class="edu-duration">2019 – 2022</span>
+                            <p class="edu-location">Rajkot, India</p>
+                        </div>
+                    </div>
+
+                    <div class="edu-progress"></div>
                 </div>
             </div>
 
@@ -529,6 +574,24 @@
                 }
             }
         });
+
+        swiper.on("slideChangeTransitionEnd", function () {
+            const active = document.querySelector(".swiper-slide-active.education");
+            if (!active) return;
+
+            const items = active.querySelectorAll(".edu-item");
+            items.forEach((item, i) => {
+                setTimeout(() => item.classList.add("show"), i * 200);
+            });
+
+            const progress = active.querySelector(".edu-progress");
+            const timeline = active.querySelector(".edu-timeline");
+
+            if (progress && timeline) {
+                progress.style.height = timeline.scrollHeight + "px";
+            }
+        });
+
 
     });
 

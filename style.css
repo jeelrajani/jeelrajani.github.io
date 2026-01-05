@@ -1023,3 +1023,106 @@ form h2 .SocialLinks i:hover {
   transform: translateY(-2px);
   color: #80ed99;
 }
+
+.education {
+  padding: 100px;
+  color: white;
+}
+
+.edu-timeline {
+  position: relative;
+  margin-top: 40px;
+  padding-left: 50px;
+}
+
+.edu-timeline::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.edu-progress {
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 4px;
+  height: 0;
+  background: #80ed99;
+  transition: height 1.2s ease;
+}
+
+.edu-item {
+  display: flex;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.edu-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.edu-dot {
+  width: 40px;
+  height: 40px;
+  background: #212529;
+  border: 3px solid #80ed99;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.edu-dot i {
+  color: #80ed99;
+}
+
+.edu-card {
+  margin-left: 30px;
+  padding: 20px 25px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.edu-card h2 {
+  color: #80ed99;
+  font-size: 1.4rem;
+}
+
+.edu-institute {
+  margin-top: 6px;
+  font-size: 1.1rem;
+}
+
+.edu-link {
+  margin-left: 10px;
+  color: #80ed99;
+  font-size: 0.9rem;
+}
+
+.edu-link:hover {
+  color: white;
+}
+
+.edu-duration {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.edu-location {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
