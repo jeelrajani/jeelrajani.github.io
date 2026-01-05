@@ -1345,3 +1345,22 @@ form h2 .SocialLinks i:hover {
 .about-slide.show .skill-bars span {
   width: var(--w);
 }
+
+/* CV BUTTON */
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.cv-btn:hover {
+  background-color: #80ed99;
+  color: #176d2d;
+  transform: translateY(-2px);
+}
+
+.cv-btn i {
+  font-size: 1rem;
+}
