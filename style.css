@@ -1479,3 +1479,53 @@ form h2 .SocialLinks i:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* footer */
+.site-footer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+
+  opacity: 0;
+  pointer-events: none;
+
+  z-index: 999;
+  transition: all 0.4s ease;
+}
+
+.site-footer.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.footer-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 22px;
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #7f5af0, #5a2dfc);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow: 0 0 0 rgba(127, 90, 240, 0.6);
+  animation: pulse 2s infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(127, 90, 240, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(127, 90, 240, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(127, 90, 240, 0);
+  }
+}

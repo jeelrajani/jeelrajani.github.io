@@ -761,6 +761,12 @@
                 <!-- <footer>
                     <li>Copyright © 2026 Jeel.</li>
                 </footer> -->
+                <footer class="site-footer" id="siteFooter">
+                    <a href="Jeel-Rajani-CV.pdf" download class="footer-cv-btn">
+                        <i class="fa-solid fa-download"></i> Download CV
+                    </a>
+                </footer>
+
             </div>
         </div>
 </main>
@@ -886,6 +892,18 @@
             }
         });
 
+        const footer = document.getElementById("siteFooter");
+        swiper.on("slideChange", () => {
+            if (swiper.activeIndex === 0) {
+                footer.classList.add("show");
+            } else {
+                footer.classList.remove("show");
+            }
+        });
+        // Show on initial load (home slide)
+        if (swiper.activeIndex === 0) {
+            footer.classList.add("show");
+        }
     });
 
     function Navigate(indx) {
