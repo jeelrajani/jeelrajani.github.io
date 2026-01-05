@@ -796,63 +796,96 @@
             }
         });
 
-        swiper.on("slideChangeTransitionEnd", () => {
-            const active = document.querySelector(".swiper-slide-active");
+        swiper.on("slideChange", function () {
+            document.querySelectorAll(".Links li")
+                .forEach(li => li.classList.remove("activeLink"));
+
+            document.querySelectorAll(".Links li")[swiper.activeIndex]
+                .classList.add("activeLink");
+        });
+
+        swiper.on("slideChangeTransitionEnd", function () {
+            const activeSlide = document.querySelector(".swiper-slide-active");
+
+            if (!activeSlide) return;
+
+            // EXPERIENCE SLIDE
+            if (activeSlide.classList.contains("experience")) {
+
+                // Animate timeline items
+                const items = activeSlide.querySelectorAll(".animate");
+                items.forEach((item, index) => {
+                    item.classList.remove("show");
+                    setTimeout(() => {
+                        item.classList.add("show");
+                    }, index * 180);
+                });
+
+                // Animate timeline progress
+                const timeline = activeSlide.querySelector(".timeline");
+                const progress = activeSlide.querySelector(".timeline-progress");
+
+                if (timeline && progress) {
+                    progress.style.height = timeline.scrollHeight + "px";
+                }
+            }
+        });
+
+        swiper.on("slideChangeTransitionEnd", function () {
+            const active = document.querySelector(".swiper-slide-active.education");
             if (!active) return;
 
-            // ABOUT
-            if (active.classList.contains("about-slide")) {
-                active.classList.add("show");
-                active.querySelectorAll(".animate").forEach((el, i) => {
-                    setTimeout(() => el.classList.add("show"), i * 150);
-                });
+            const items = active.querySelectorAll(".edu-item");
+            items.forEach((item, i) => {
+                setTimeout(() => item.classList.add("show"), i * 200);
+            });
+
+            const progress = active.querySelector(".edu-progress");
+            const timeline = active.querySelector(".edu-timeline");
+
+            if (progress && timeline) {
+                progress.style.height = timeline.scrollHeight + "px";
             }
+        });
 
-            // SKILLS
-            if (active.classList.contains("skills")) {
-                active.querySelector(".skill-radar")?.classList.add("show");
-                active.querySelectorAll(".skill-block").forEach((el, i) => {
-                    setTimeout(() => el.classList.add("show"), i * 120);
-                });
-            }
+        swiper.on("slideChangeTransitionEnd", function () {
+            const active = document.querySelector(".swiper-slide-active.skills");
+            if (!active) return;
 
-            // EXPERIENCE
-            if (active.classList.contains("experience")) {
-                active.querySelectorAll(".animate").forEach((el, i) => {
-                    setTimeout(() => el.classList.add("show"), i * 180);
-                });
+            active.querySelector(".skill-radar")?.classList.add("show");
 
-                const progress = active.querySelector(".timeline-progress");
-                const timeline = active.querySelector(".timeline");
-                if (progress && timeline) {
-                    progress.style.height = timeline.scrollHeight + "px";
-                }
-            }
+            active.querySelectorAll(".skill-block").forEach((el, i) => {
+                setTimeout(() => el.classList.add("show"), i * 120);
+            });
+        });
 
-            // EDUCATION
-            if (active.classList.contains("education")) {
-                active.querySelectorAll(".edu-item").forEach((el, i) => {
-                    setTimeout(() => el.classList.add("show"), i * 200);
-                });
+        swiper.on("slideChangeTransitionEnd", function () {
+            const about = document.querySelector(".swiper-slide-active.about-slide");
+            if (!about) return;
 
-                const progress = active.querySelector(".edu-progress");
-                const timeline = active.querySelector(".edu-timeline");
-                if (progress && timeline) {
-                    progress.style.height = timeline.scrollHeight + "px";
-                }
-            }
+            about.classList.add("show");
 
-            // SERVICES
-            if (active.classList.contains("services")) {
-                active.querySelectorAll(".service-card").forEach((card, i) => {
-                    setTimeout(() => card.classList.add("show"), i * 120);
-                });
-            }
+            about.querySelectorAll(".animate").forEach((el, i) => {
+                setTimeout(() => el.classList.add("show"), i * 150);
+            });
         });
 
         setTimeout(() => {
             document.querySelector('.cv-btn')?.classList.remove('pulse');
         }, 6000);
+
+        swiper.on("slideChange", () => {
+            document.querySelectorAll(".service-card").forEach(card => {
+                card.classList.remove("show");
+            });
+
+            if (swiper.slides[swiper.activeIndex].classList.contains("services")) {
+                document.querySelectorAll(".service-card").forEach((card, i) => {
+                    setTimeout(() => card.classList.add("show"), i * 120);
+                });
+            }
+        });
+
     });
 
     function Navigate(indx) {
