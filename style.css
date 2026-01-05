@@ -1248,3 +1248,100 @@ form h2 .SocialLinks i:hover {
   background: #80ed99;
   color: #176d2d;
 }
+
+/* About me */
+.about-modern {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 80px 100px;
+  color: white;
+}
+
+/* LEFT */
+.about-text {
+  line-height: 1.7;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+.about-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stat span {
+  font-size: 2rem;
+  color: #80ed99;
+  font-weight: 700;
+}
+
+.stat p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* RIGHT */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.info-card {
+  background: #212529;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+.info-card span {
+  color: #80ed99;
+  display: block;
+  font-size: 0.8rem;
+}
+
+/* SKILLS */
+.skill-bars .skill {
+  margin-bottom: 15px;
+}
+
+.skill-bars label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.skill-bars .bar {
+  background: #272c30;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-bars .bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #80ed99;
+  border-radius: 10px;
+  transition: width 1s ease;
+}
+
+/* ANIMATION */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-slide.show .skill-bars span {
+  width: var(--w);
+}

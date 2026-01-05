@@ -76,7 +76,7 @@
                 <p class="slide-help">Scroll for next slide <i class="fa-solid fa-chevron-down fa-shake"></i>
                 </p>
             </div>
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
                 <div class="about-us">
                     <h1 class="heading">About Me</h1>
                     <h3 class="sub-heading">I'm Jeel, <span class="proffesions">A Web Developer</span></h3>
@@ -135,7 +135,83 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+
+            <div class="swiper-slide about-slide">
+                <div class="about-modern">
+
+                    <div class="about-left animate">
+                        <h1 class="heading">About Me</h1>
+
+                        <h3 class="sub-heading">
+                            I'm Jeel, <span class="proffesions">Backend Developer</span>
+                        </h3>
+
+                        <p class="about-text">
+                            Backend Developer with <strong>2+ years</strong> of experience building
+                            secure, scalable, and performance-driven web applications.
+                            Specialized in <strong>PHP, MySQL, REST APIs</strong>, and
+                            custom backend architectures.
+                        </p>
+
+                        <p class="about-text">
+                            Experienced in CRM systems, finance platforms, API integrations,
+                            and database optimization. I focus on clean code, scalability,
+                            and real-world business logic.
+                        </p>
+
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span>2+</span>
+                                <p>Years Experience</p>
+                            </div>
+                            <div class="stat">
+                                <span>10+</span>
+                                <p>Projects Delivered</p>
+                            </div>
+                            <div class="stat">
+                                <span>Backend</span>
+                                <p>Specialization</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-right">
+
+                        <div class="info-cards animate">
+                            <div class="info-card"><span>Role</span>Backend Developer</div>
+                            <div class="info-card"><span>Stack</span>PHP, MySQL</div>
+                            <div class="info-card"><span>Frameworks</span>CodeIgniter</div>
+                            <div class="info-card"><span>APIs</span>REST / JSON</div>
+                            <div class="info-card"><span>Location</span>India</div>
+                            <div class="info-card"><span>Availability</span>Full-Time</div>
+                        </div>
+
+                        <div class="skill-bars animate">
+                            <div class="skill">
+                                <label>PHP</label>
+                                <div class="bar"><span style="--w:85%"></span></div>
+                            </div>
+                            <div class="skill">
+                                <label>MySQL</label>
+                                <div class="bar"><span style="--w:80%"></span></div>
+                            </div>
+                            <div class="skill">
+                                <label>APIs</label>
+                                <div class="bar"><span style="--w:75%"></span></div>
+                            </div>
+                            <div class="skill">
+                                <label>JavaScript</label>
+                                <div class="bar"><span style="--w:65%"></span></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
+
+
             <!-- <div class="swiper-slide skills">
                 <h1 class="heading">Skills</h1>
 
@@ -692,6 +768,17 @@
 
             active.querySelectorAll(".skill-block").forEach((el, i) => {
                 setTimeout(() => el.classList.add("show"), i * 120);
+            });
+        });
+
+        swiper.on("slideChangeTransitionEnd", function () {
+            const about = document.querySelector(".swiper-slide-active.about-slide");
+            if (!about) return;
+
+            about.classList.add("show");
+
+            about.querySelectorAll(".animate").forEach((el, i) => {
+                setTimeout(() => el.classList.add("show"), i * 150);
             });
         });
 
