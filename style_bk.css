@@ -1509,9 +1509,11 @@ form h2 .SocialLinks i:hover {
 
 .contact-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 160px;
+  flex-wrap: wrap;
+  padding: 50% 0;
 }
 
 .contact-left {
