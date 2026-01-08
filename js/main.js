@@ -10,19 +10,28 @@ document.addEventListener("DOMContentLoaded", () => {
     ======================= */
     swiper = new Swiper(".swiper", {
         direction: "vertical",
-        effect: "cube",
-        speed: 800,
+        speed: 900,
+        effect: "creative",
 
-        cubeEffect: {
-            shadow: false,
-            slideShadows: false,
+        creativeEffect: {
+            perspective: true,
+            limitProgress: 2,
+            prev: {
+                translate: [0, "-100%", -300],
+                rotate: [90, 0, 0],
+                opacity: 0.4,
+            },
+            next: {
+                translate: [0, "100%", -300],
+                rotate: [-90, 0, 0],
+                opacity: 0.4,
+            },
         },
 
         mousewheel: {
             sensitivity: 0.8,
             forceToAxis: true,
             releaseOnEdges: true,
-            thresholdDelta: 20,
         },
 
         keyboard: {
