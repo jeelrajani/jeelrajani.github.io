@@ -85,6 +85,17 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
+        // ABOUT
+        if (active.classList.contains("about-slide")) {
+
+            active.querySelectorAll(".animate").forEach((el, i) => {
+                el.classList.remove("show");
+                setTimeout(() => el.classList.add("show"), i * 120);
+            });
+            const bars = active.querySelector(".skill-bars");
+            bars?.classList.add("show");
+        }
+
         // SERVICES
         if (active.classList.contains("services")) {
             active.querySelectorAll(".service-card").forEach((card, i) => {
@@ -102,14 +113,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    swiper.on("slideChangeTransitionEnd", () => {
-        const skillsSlide = document.querySelector(".swiper-slide-active.skills");
-        if (!skillsSlide) return;
-
-        const bars = skillsSlide.querySelector(".skill-bars");
-        bars?.classList.add("show");
+    swiper.on("slideChange", () => {
+        document
+            .querySelectorAll(".about-slide .skill-bars")
+            .forEach(b => b.classList.remove("show"));
     });
-
 
     /* =======================
        CV PULSE REMOVE
