@@ -1327,7 +1327,10 @@ form h2 .SocialLinks i:hover {
   width: 0;
   background: #80ed99;
   border-radius: 10px;
-  transition: width 1s ease;
+  transition: width 1.2s ease;
+}
+.skill-bars.show .bar span {
+  width: var(--w);
 }
 
 /* ANIMATION */
