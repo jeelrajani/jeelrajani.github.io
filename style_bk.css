@@ -1617,3 +1617,21 @@ form h2 .SocialLinks i:hover {
   border-color: #00ff9c;
   outline: none;
 }
+
+
+/* Fix cube effect click & text selection issue */
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+    pointer-events: auto;
+}
+
+.swiper-cube .swiper-slide {
+    pointer-events: auto !important;
+    user-select: text;
+}
+
+.swiper-cube .swiper-slide * {
+    pointer-events: auto;
+    user-select: text;
+}
