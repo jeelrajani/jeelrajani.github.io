@@ -901,6 +901,17 @@
             }
         });
 
+        swiper.on("slideChangeTransitionEnd", () => {
+            const contact = document.querySelector(".swiper-slide-active.contact-modern");
+            if (!contact) return;
+
+            contact.querySelectorAll(".animate").forEach((el, i) => {
+                el.classList.remove("show");
+                setTimeout(() => el.classList.add("show"), i * 150);
+            });
+        });
+
+
     });
 
     function Navigate(indx) {
