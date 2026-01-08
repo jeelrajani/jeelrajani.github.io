@@ -7,11 +7,11 @@
   box-sizing: border-box;
 }
 
-/* html,
+html,
 body {
   height: 100%;
   overflow: hidden;
-} */
+}
 
 main {
   display: flex;
@@ -1613,53 +1613,4 @@ form h2 .SocialLinks i:hover {
 .contact-form textarea:focus {
   border-color: #00ff9c;
   outline: none;
-}
-
-/* ============================================================================================= */
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  background: #0b0b0b;
-  color: #fff;
-  font-family: "Inter", sans-serif;
-}
-
-.swiper,
-.swiper-wrapper,
-.swiper-slide {
-  height: 100vh;
-}
-
-.swiper-slide {
-  padding: 80px 120px;
-  box-sizing: border-box;
-}
-
-.skills-cloud span {
-  padding: 10px 20px;
-  border: 1px solid #222;
-  border-radius: 50px;
-  margin: 10px;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.skills-cloud span:hover {
-  border-color: #00ff9c;
-  color: #00ff9c;
-  transform: translateY(-4px);
-}
-
-.float-dot {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: #00ff9c;
-  border-radius: 50%;
-  animation: float 4s infinite ease-in-out;
 }

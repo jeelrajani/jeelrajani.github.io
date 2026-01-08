@@ -54,32 +54,44 @@
     <div class="swiper mySwiper">
         <div class="SlideContainer swiper-wrapper">
             <div class="swiper-slide home-slide">
-                <div class="home-grid">
+                <div class="HomeContent">
+                    <h1>Hi! I'm <span class="stylized-name">Jeel</span>,</h1>
+                    <h2>
+                        A <span class="proffesions" id="typing-text"></span>
+                    </h2>
 
-                    <div class="home-left">
-                        <h1>Hi! I'm <span>Jeel</span></h1>
-                        <h2>A <span id="typing-text"></span></h2>
+                    <p class="heroline">
+                        I build secure, scalable backend systems using PHP,
+                        MySQL, REST APIs, and custom business logic.
+                    </p>
 
-                        <p>
-                            I build secure, scalable backend systems using PHP,
-                            MySQL, REST APIs, and business logic.
-                        </p>
+                    <div class="buttonGroup">
+                        <a href="Jeel_Rajani_CV.pdf" download class="primary cv-btn pulse">
+                            <i class="fa-solid fa-download"></i>
+                            Download CV
+                        </a>
 
-                        <div class="home-actions">
-                            <a href="cv.pdf" class="btn-primary pulse">Download CV</a>
-                            <a href="#contact" class="btn-secondary">Contact Me</a>
-                        </div>
+                        <a href="javascript:void(0)" class="secondary contact-btn" onclick="Navigate(7)">
+                            <i class="fa-solid fa-envelope"></i>
+                            Contact Me
+                        </a>
+
                     </div>
-
-                    <div class="home-right">
-                        <img src="bg-og-v2.jpeg" alt="Jeel Rajani">
-                    </div>
-
-                    <!-- floating symbols -->
-                    <span class="float-dot"></span>
-                    <span class="float-ring"></span>
 
                 </div>
+                <div class="SideImg">
+                    <div class="top-right-corner">
+                        <hr class="hr1">
+                        <hr class="hr2">
+                    </div>
+                    <img src="bg-og-v2.jpeg" alt="Jeel Rajani Backend Developer" loading="lazy">
+                    <div class="bottom-left-corner">
+                        <hr class="hr1">
+                        <hr class="hr2">
+                    </div>
+                </div>
+                <p class="slide-help">Scroll for next slide <i class="fa-solid fa-chevron-down fa-shake"></i>
+                </p>
             </div>
 
             <!-- <div class="swiper-slide">
@@ -143,26 +155,79 @@
                 </div>
             </div> -->
 
-            <div class="swiper-slide about-modern">
-                <h1 class="heading">About Me</h1>
+            <div class="swiper-slide about-slide">
+                <div class="about-modern">
 
-                <div class="about-grid">
-                    <p class="about-text">
-                        Backend Developer with 2+ years of experience building
-                        scalable PHP applications, REST APIs, and data-driven systems.
-                        Focused on clean architecture and performance.
-                    </p>
+                    <div class="about-left animate">
+                        <h1 class="heading">About Me</h1>
 
-                    <ul class="about-facts">
-                        <li><strong>Experience:</strong> 2+ Years</li>
-                        <li><strong>Role:</strong> Backend Developer</li>
-                        <li><strong>Stack:</strong> PHP, MySQL</li>
-                        <li><strong>Frameworks:</strong> CodeIgniter</li>
-                        <li><strong>Location:</strong> India</li>
-                    </ul>
+                        <h3 class="sub-heading">
+                            I'm Jeel, <span class="proffesions">Backend Developer</span>
+                        </h3>
+
+                        <p class="about-text">
+                            Backend Developer with <strong>2+ years</strong> of experience building
+                            secure, scalable, and performance-driven web applications.
+                            Specialized in <strong>PHP, MySQL, REST APIs</strong>, and
+                            custom backend architectures.
+                        </p>
+
+                        <p class="about-text">
+                            Experienced in CRM systems, finance platforms, API integrations,
+                            and database optimization. I focus on clean code, scalability,
+                            and real-world business logic.
+                        </p>
+
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span>2+</span>
+                                <p>Years Experience</p>
+                            </div>
+                            <div class="stat">
+                                <span>10+</span>
+                                <p>Projects Delivered</p>
+                            </div>
+                            <div class="stat">
+                                <span>Backend</span>
+                                <p>Specialization</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-right">
+
+                        <div class="info-cards animate">
+                            <div class="info-card"><span>Role</span>Backend Developer</div>
+                            <div class="info-card"><span>Stack</span>PHP, MySQL</div>
+                            <div class="info-card"><span>Frameworks</span>CodeIgniter</div>
+                            <div class="info-card"><span>APIs</span>REST / JSON</div>
+                            <div class="info-card"><span>Location</span>India</div>
+                            <div class="info-card"><span>Availability</span>Full-Time</div>
+                        </div>
+
+                        <div class="skill-bars animate">
+                            <div class="skill">
+                                <label>PHP</label>
+                                <div class="bar"><span style="--w:85%"></span></div>
+                            </div>
+                            <div class="skill">
+                                <label>MySQL</label>
+                                <div class="bar"><span style="--w:80%"></span></div>
+                            </div>
+                            <div class="skill">
+                                <label>APIs</label>
+                                <div class="bar"><span style="--w:75%"></span></div>
+                            </div>
+                            <div class="skill">
+                                <label>JavaScript</label>
+                                <div class="bar"><span style="--w:65%"></span></div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
-
 
 
             <!-- <div class="swiper-slide skills">
@@ -203,22 +268,95 @@
                 </div>
             </div> -->
 
-            <div class="swiper-slide skills-modern">
+            <div class="swiper-slide skills">
                 <h1 class="heading">Skills</h1>
 
-                <div class="skills-cloud">
-                    <span>PHP</span>
-                    <span>MySQL</span>
-                    <span>REST APIs</span>
-                    <span>CodeIgniter</span>
-                    <span>API Integrations</span>
-                    <span>Backend Logic</span>
-                    <span>Git</span>
-                    <span>Linux</span>
-                    <span>cPanel</span>
+                <div class="skills-unique">
+
+                    <div class="skill-radar animate">
+                        <svg viewBox="0 0 200 200">
+                            <circle cx="100" cy="100" r="80" />
+                            <circle cx="100" cy="100" r="60" />
+                            <circle cx="100" cy="100" r="40" />
+
+                            <!-- Skill polygon -->
+                            <polygon class="skill-shape" points="100,20 170,70 150,140 100,170 50,140 30,70" />
+                        </svg>
+
+                        <div class="radar-labels">
+                            <span>Backend</span>
+                            <span>APIs</span>
+                            <span>DB</span>
+                            <span>Frontend</span>
+                            <span>Tools</span>
+                            <span>Deploy</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-categories">
+
+                        <div class="skill-block animate">
+                            <h3><i class="fa-solid fa-server"></i> Backend & Logic</h3>
+                            <div class="tech-tags">
+                                <span>PHP</span>
+                                <span>MVC</span>
+                                <span>Business Logic</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-block animate">
+                            <h3><i class="fa-solid fa-plug"></i> APIs & Integrations</h3>
+                            <div class="tech-tags">
+                                <span>REST</span>
+                                <span>JSON</span>
+                                <span>XML</span>
+                                <span>Third-Party APIs</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-block animate">
+                            <h3><i class="fa-solid fa-database"></i> Database</h3>
+                            <div class="tech-tags">
+                                <span>MySQL</span>
+                                <span>Joins</span>
+                                <span>Indexes</span>
+                                <span>Optimization</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-block animate">
+                            <h3><i class="fa-solid fa-code"></i> Frontend (Supporting)</h3>
+                            <div class="tech-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>AJAX</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-block animate">
+                            <h3><i class="fa-solid fa-toolbox"></i> Tools & Workflow</h3>
+                            <div class="tech-tags">
+                                <span>Git</span>
+                                <span>GitHub</span>
+                                <span>Postman</span>
+                                <span>Jira</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-block animate">
+                            <h3><i class="fa-solid fa-cloud"></i> Deployment</h3>
+                            <div class="tech-tags">
+                                <span>Linux</span>
+                                <span>cPanel</span>
+                                <span>FTP</span>
+                                <span>FileZilla</span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-
 
 
             <!-- <div class="swiper-slide gallery experience">
@@ -244,23 +382,64 @@
                 </div>
             </div> -->
 
-            <div class="swiper-slide experience-modern">
-                <h1 class="heading">Experience</h1>
+            <div class="swiper-slide gallery experience">
+                <h1 class="heading">Work Experience</h1>
 
                 <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="dot"></span>
-                        <h3>
-                            Jr. PHP Developer
-                            <a href="https://droptechnolab.com" target="_blank">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-                        </h3>
-                        <p>Drop Techno Lab Pvt Ltd · Feb 2024 – Present</p>
+                    <div class="timeline-progress"></div>
+
+                    <div class="timeline-item animate">
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+                            <div class="company-header">
+                                <img src="images/drop-technolab.png" alt="Drop Techno Lab" class="company-logo">
+
+                                <div>
+                                    <h3>Jr. PHP Developer</h3>
+                                    <p class="company">
+                                        <strong>Drop Techno Lab Private Limited</strong> • Ahmedabad
+                                        <a href="https://www.droptechnolab.com" target="_blank" class="company-link">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </p>
+                                    <span class="duration">Feb 2024 – Present</span>
+                                </div>
+                            </div>
+
+                            <ul>
+                                <li>Developed backend modules using PHP & MVC</li>
+                                <li>Integrated third-party APIs and CRMs</li>
+                                <li>Implemented authentication and RBAC</li>
+                                <li>Optimized MySQL queries</li>
+                                <li>Handled file uploads, emails & cron jobs</li>
+                            </ul>
+                        </div>
                     </div>
+
+                    <!-- Future Experience (Optional) -->
+                    <div class="timeline-item animate muted">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="company-header">
+                                <img src="images/drop-technolab.png" alt="Drop Techno Lab" class="company-logo">
+
+                                <div>
+                                    <h3>Intern PHP Developer</h3>
+                                    <p class="company">
+                                        <strong>Drop Techno Lab Private Limited</strong> • Ahmedabad
+                                        <a href="https://www.droptechnolab.com" target="_blank" class="company-link">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </p>
+                                    <span class="duration">Internship</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
 
             <!-- <div class="swiper-slide education">
                 <h1 class="heading">Education</h1>
@@ -378,14 +557,57 @@
                 </div>
             </div> -->
 
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="projects/ecommerce.jpg">
-                    <h3>E-Commerce Platform</h3>
-                    <p>PHP, CodeIgniter, MySQL</p>
+            <div class="swiper-slide projects">
+                <h1 class="heading">Projects</h1>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <img src="images/ecommerce.jpg" alt="E-commerce Platform" loading="lazy">
+                        <div class="project-content">
+                            <h2>Multi-Vendor & Multi-Language E-Commerce</h2>
+                            <p class="tech">PHP (MVC), CodeIgniter, MySQL</p>
+                            <ul>
+                                <li>Scalable multi-vendor system</li>
+                                <li>Custom multi-language management</li>
+                                <li>Admin panels for vendors & content</li>
+                                <li>Optimized database performance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <img src="images/lender-platform.jpg" alt="Lender Consumer Platform" loading="lazy">
+                        <div class="project-content">
+                            <h2>Lender–Consumer Application Platform</h2>
+                            <p class="tech">Custom PHP, MySQL, APIs</p>
+                            <ul>
+                                <li>Backend system for lenders & borrowers</li>
+                                <li>Creditsafe & Companies House integration</li>
+                                <li>Cloud document uploads (BOX)</li>
+                                <li>Decision engine & CRM integrations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <img src="images/database-system.jpg" alt="Dynamic Database System" loading="lazy">
+                        <div class="project-content">
+                            <h2>Dynamic Database Management System</h2>
+                            <p class="tech">PHP, MySQL</p>
+                            <ul>
+                                <li>Dynamic schema creation</li>
+                                <li>Secure data handling</li>
+                                <li>Query optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
 
             <!-- <div class="swiper-slide services">
 
@@ -687,13 +909,6 @@
                 el.classList.remove("show");
                 setTimeout(() => el.classList.add("show"), i * 150);
             });
-        });
-
-        swiper.on('slideChange', () => {
-            document.body.classList.toggle(
-                "show-footer",
-                swiper.activeIndex === 0
-            );
         });
 
 
