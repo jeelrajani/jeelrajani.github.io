@@ -1618,20 +1618,23 @@ form h2 .SocialLinks i:hover {
   outline: none;
 }
 
-
 /* Fix cube effect click & text selection issue */
 .swiper,
 .swiper-wrapper,
 .swiper-slide {
-    pointer-events: auto;
+  pointer-events: auto;
 }
 
 .swiper-cube .swiper-slide {
-    pointer-events: auto !important;
-    user-select: text;
+  pointer-events: auto !important;
+  user-select: text;
 }
 
 .swiper-cube .swiper-slide * {
-    pointer-events: auto;
-    user-select: text;
+  pointer-events: auto;
+  user-select: text;
+}
+
+.swiper-cube .swiper-slide {
+  visibility: visible !important;
 }
