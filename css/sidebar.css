@@ -1,0 +1,51 @@
+aside {
+  width: 280px;
+  background: #000;
+  border-right: 1px solid rgba(128, 237, 153, 0.4);
+  display: flex;
+}
+
+.Links {
+  margin: auto;
+}
+
+aside li {
+  list-style: none;
+  padding: 18px 24px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+aside li:hover,
+.activeLink {
+  color: #80ed99;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  aside {
+    position: fixed;
+    left: -280px;
+    transition: 0.3s;
+    z-index: 999;
+  }
+  aside.active {
+    left: 0;
+  }
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 1.8rem;
+    color: white;
+    z-index: 1000;
+  }
+}

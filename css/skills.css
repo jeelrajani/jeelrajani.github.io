@@ -1,0 +1,39 @@
+.skills {
+  padding: 80px 100px;
+}
+
+.skills-unique {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 60px;
+}
+
+.skill-radar {
+  width: 300px;
+  height: 300px;
+}
+
+.skill-shape {
+  fill: rgba(128, 237, 153, 0.25);
+  stroke: #80ed99;
+  transform: scale(0);
+  transition: 0.8s;
+}
+
+.skill-radar.show .skill-shape {
+  transform: scale(1);
+}
+
+.skill-block {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 14px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s;
+}
+
+.skill-block.show {
+  opacity: 1;
+  transform: translateY(0);
+}

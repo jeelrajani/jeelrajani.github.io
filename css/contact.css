@@ -1,0 +1,29 @@
+.contact-modern {
+  padding: 80px 100px;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.contact-title {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.contact-title span {
+  color: #00ff9c;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ff9c;
+}

@@ -1,0 +1,35 @@
+.about-modern {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 80px 100px;
+}
+
+.about-text {
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.about-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stat span {
+  font-size: 2rem;
+  color: #80ed99;
+  font-weight: 700;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.info-card {
+  background: #212529;
+  padding: 15px;
+  border-radius: 12px;
+}

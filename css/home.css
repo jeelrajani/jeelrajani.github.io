@@ -1,0 +1,57 @@
+.home-slide {
+  display: flex;
+  align-items: center;
+}
+
+.HomeContent {
+  flex: 1;
+  padding: 100px;
+}
+
+.HomeContent h1 {
+  font-size: 3rem;
+}
+
+.stylized-name {
+  color: #80ed99;
+}
+
+.proffesions {
+  color: #85f69f;
+  border-right: 3px solid #85f69f;
+  padding-right: 6px;
+  animation: blink 1s step-end infinite;
+}
+
+.proffesions.cursor-hide {
+  border-right: none;
+}
+
+.heroline {
+  font-size: 1.4rem;
+  opacity: 0.85;
+  margin-top: 15px;
+}
+
+.buttonGroup {
+  margin-top: 30px;
+  display: flex;
+  gap: 18px;
+}
+
+.primary {
+  padding: 14px 32px;
+  border-radius: 30px;
+  background: #80ed99;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary {
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: 2px solid #80ed99;
+  background: transparent;
+  color: #80ed99;
+}
