@@ -1480,3 +1480,19 @@ form h2 .SocialLinks i:hover {
   transform: translateY(0);
 }
 
+.contact-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.contact-cta.secondary {
+  background: transparent;
+  color: #00ff9c;
+  border: 1px solid #00ff9c;
+}
+
+.contact-cta.secondary:hover {
+  background: #00ff9c;
+  color: #000;
+}
