@@ -1358,6 +1358,7 @@ form h2 .SocialLinks i:hover {
   gap: 10px;
   text-decoration: none;
   transition: 0.25s ease;
+  border-radius: 30px;
 }
 
 .cv-btn:hover {
@@ -1378,7 +1379,7 @@ form h2 .SocialLinks i:hover {
 }
 
 .secondary {
-  padding: 12px 26px;
+  padding: 14px 20px;
   border-radius: 30px;
   border: 2px solid #80ed99;
   background: transparent;
