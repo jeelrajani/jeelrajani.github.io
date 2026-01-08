@@ -1256,6 +1256,8 @@ form h2 .SocialLinks i:hover {
   gap: 60px;
   padding: 80px 100px;
   color: white;
+  align-items: center;
+  min-height: 100vh;
 }
 
 /* LEFT */
@@ -1509,11 +1511,11 @@ form h2 .SocialLinks i:hover {
 
 .contact-wrapper {
   display: flex;
-  justify-content: center; /* Horizontal center */
+  justify-content: flex-start; /* Horizontal center */
   align-items: center; /* Vertical center */
   gap: 160px;
   flex-wrap: wrap;
-  min-height: 100vh; /* Make wrapper take full viewport height */
+  min-height: 85vh; /* Make wrapper take full viewport height */
   padding: 0 100px; /* Optional horizontal padding */
   box-sizing: border-box;
 }
