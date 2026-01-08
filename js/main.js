@@ -102,6 +102,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    swiper.on("slideChangeTransitionEnd", () => {
+        const skillsSlide = document.querySelector(".swiper-slide-active.skills");
+        if (!skillsSlide) return;
+
+        const bars = skillsSlide.querySelector(".skill-bars");
+        bars?.classList.add("show");
+    });
+
+
     /* =======================
        CV PULSE REMOVE
     ======================= */
