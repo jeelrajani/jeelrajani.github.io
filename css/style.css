@@ -1774,3 +1774,89 @@ button,
   }
 }
 /* ------------- */
+
+/* Profile image */
+.profile-wrap {
+  position: relative;
+  width: 320px;
+  margin: auto;
+}
+
+.profile-img {
+  width: 100%;
+  border-radius: 12px;
+  z-index: 2;
+  position: relative;
+}
+
+/* CORNERS */
+.corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #80ed99;
+  opacity: 0;
+  animation: cornerIn 1s ease forwards;
+}
+
+.tl {
+  top: -12px;
+  left: -12px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.tr {
+  top: -12px;
+  right: -12px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.bl {
+  bottom: -12px;
+  left: -12px;
+  border-right: none;
+  border-top: none;
+}
+
+.br {
+  bottom: -12px;
+  right: -12px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Glow */
+.corner {
+  box-shadow: 0 0 20px rgba(128, 237, 153, 0.8);
+}
+
+/* Animation */
+@keyframes cornerIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.profile-wrap {
+  transition: transform 0.25s ease;
+}
+.profile-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(
+    circle,
+    rgba(128, 237, 153, 0.25),
+    transparent 60%
+  );
+  z-index: 1;
+  filter: blur(20px);
+}
+
+/* ------------- */
