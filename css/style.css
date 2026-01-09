@@ -1090,11 +1090,11 @@ form h2 .SocialLinks i:hover {
 .edu-card {
   margin-left: 30px;
   padding: 0px 25px;
-  background: rgba(0, 0, 0, 0.4);
+  /* background: rgba(0, 0, 0, 0.4); */
   border-radius: 12px;
   width: 100%;
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
 }
 
 .edu-card h2 {
