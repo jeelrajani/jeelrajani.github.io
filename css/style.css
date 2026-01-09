@@ -399,118 +399,6 @@ aside li i {
   padding: 100px;
 }
 
-/* .contactMe h1 {
-  grid-column: 1 / span 3;
-  font-size: 2.5rem;
-  padding: 30px;
-}
-
-.contactMe form {
-  grid-area: 2/2 / span 5 / span 2;
-} */
-
-/* .contactinfo {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  color: white;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-
-.contactinfo i {
-  padding: 10px;
-  font-size: 2.5rem;
-  color: #80ed99;
-  margin: 20px auto;
-}
-
-.contactinfo h3 {
-  color: #80ed99;
-} */
-
-/* .contactMe form {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  width: 100%;
-  padding: 20px;
-  height: fit-content;
-  color: white;
-}
-
-.contactMe form h2 {
-  grid-column: 1 / span 2;
-  padding: 20px;
-  display: flex;
-}
-
-.contactMe form input {
-  padding: 15px;
-  border-radius: 10px;
-  margin: 20px;
-  font-size: 1.1rem;
-  border: none;
-  color: white;
-  background-color: #212529;
-}
-
-.contactMe form input:focus {
-  border: 1px solid #85f69f;
-  outline: none;
-}
-
-.contactMe form textarea {
-  width: calc(100% - 40px);
-
-  grid-column: 1 / span 2;
-  margin: 20px;
-  padding: 20px;
-  font-size: 1.1rem;
-  border-radius: 10px;
-  resize: none;
-  border: none;
-  border: none;
-  color: white;
-  background-color: #212529;
-}
-
-.contactMe form textarea:focus {
-  border: 1px solid #85f69f !important;
-}
-.contactMe button {
-  grid-column: 1 / span 2;
-  margin: 20px auto;
-} */
-footer {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  text-align: center;
-  color: white;
-  width: 100%;
-  font-weight: 200;
-  font-size: 0.8rem;
-}
-footer li {
-  padding: 10px;
-}
-form h2 .SocialLinks {
-  padding: 5px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: 10px;
-  background-color: #212529;
-  border-radius: 30px;
-}
-form h2 .SocialLinks i {
-  padding: 10px;
-  border-radius: 50%;
-  transition-duration: 0.25s;
-}
-form h2 .SocialLinks i:hover {
-  background-color: #176d2d;
-}
 .about-us {
   overflow: auto;
 }
@@ -691,51 +579,6 @@ form h2 .SocialLinks i:hover {
   overflow-y: auto;
 }
 
-/* .projects-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 1000px;
-}
-
-.project-card {
-  background: #212529;
-  padding: 30px;
-  border-radius: 14px;
-  transition: 0.25s;
-}
-
-.project-card:hover {
-  background: #80ed99;
-  color: #176d2d;
-}
-
-.project-card h2 {
-  color: #80ed99;
-  margin-bottom: 10px;
-  font-size: 1.6rem;
-}
-
-.project-card:hover h2 {
-  color: #176d2d;
-}
-
-.project-card .tech {
-  font-size: 0.95rem;
-  opacity: 0.85;
-  margin-bottom: 15px;
-}
-
-.project-card ul {
-  padding-left: 20px;
-}
-
-.project-card li {
-  margin-bottom: 10px;
-  line-height: 1.6;
-  font-weight: 300;
-} */
-
 /* Education */
 /* ===== EDUCATION ===== */
 .education {
@@ -803,9 +646,6 @@ form h2 .SocialLinks i:hover {
   text-decoration: underline;
 }
 
-/* .contactMe {
-  z-index: 999 !important;
-} */
 
 /* Animation name headings */
 .proffesions {
