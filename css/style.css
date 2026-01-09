@@ -1738,9 +1738,9 @@ form h2 .SocialLinks i:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #80ed99;
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(128, 237, 153, 0.6);
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
