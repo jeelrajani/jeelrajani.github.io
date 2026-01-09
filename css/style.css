@@ -1845,9 +1845,9 @@ button,
     transform: scale(1);
   }
 }
-.profile-wrap {
+/* .profile-wrap {
   transition: transform 0.25s ease;
-}
+} */
 .profile-wrap::before {
   content: "";
   position: absolute;
