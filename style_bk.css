@@ -1683,3 +1683,50 @@ form h2 .SocialLinks i:hover {
   }
 }
 /* ------------- */
+
+/* Sticky Chat CTA */
+.sticky-chat {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  z-index: 999;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.sticky-chat.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.sticky-chat-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 34px;
+  background: #00ff9c;
+  color: #000;
+  font-weight: 600;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 0 30px rgba(0, 255, 156, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sticky-chat-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(0, 255, 156, 0.7);
+}
+
+.sticky-chat-btn i {
+  font-size: 1rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sticky-chat {
+    bottom: 15px;
+  }
+}
+/* ------------- */

@@ -58,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
     /* =======================
        SLIDE ANIMATIONS
     ======================= */
+    const stickyChat = document.getElementById("stickyChat");
+
     swiper.on("slideChangeTransitionEnd", () => {
         const active = document.querySelector(".swiper-slide-active");
         if (!active) return;
@@ -120,6 +122,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => el.classList.add("show"), i * 150);
             });
         }
+
+        // STICKY CHAT BUTTON
+        const activeSlide = swiper.slides[swiper.activeIndex];
+        // Hide on Home slide
+        if (swiper.activeIndex === 0) {
+            stickyChat.classList.remove("show");
+            return;
+        }
+        // Hide on Contact slide
+        if (activeSlide.classList.contains("contact-modern")) {
+            stickyChat.classList.remove("show");
+            return;
+        }
+        // Show everywhere else
+        stickyChat.classList.add("show");
     });
 
     swiper.on("slideChange", () => {
