@@ -112,12 +112,14 @@ aside li i {
   left: -50px;
   bottom: -50px;
   rotate: -90deg;
+  animation: cornerIn 1s ease forwards;
 }
 
 .top-right-corner {
   right: -50px;
   top: -50px;
   rotate: 90deg;
+  animation: cornerIn 1s ease forwards;
 }
 
 .hr1 {
