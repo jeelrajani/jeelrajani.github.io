@@ -11,6 +11,7 @@ html,
 body {
   height: 100%;
   overflow: hidden;
+  cursor: none; /* hide default cursor */
 }
 
 main {
@@ -1595,6 +1596,7 @@ form h2 .SocialLinks i:hover {
   justify-content: center;
   color: #00ff9c;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .social-icons a:hover {
@@ -1727,6 +1729,48 @@ form h2 .SocialLinks i:hover {
 @media (max-width: 768px) {
   .sticky-chat {
     bottom: 15px;
+  }
+}
+/* ------------- */
+
+/* Custom cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #80ed99;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, width 0.2s ease, height 0.2s ease,
+    background 0.2s ease;
+  z-index: 9999;
+}
+
+/* Hover effect on clickable items */
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor {
+  width: 32px;
+  height: 32px;
+  background: rgba(128, 237, 153, 0.2);
+}
+
+/* Interactive elements */
+a,
+button,
+.clickable {
+  cursor: none;
+}
+
+/* Disable on mobile */
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+  .custom-cursor {
+    display: none;
   }
 }
 /* ------------- */
